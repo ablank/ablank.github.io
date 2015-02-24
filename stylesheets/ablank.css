@@ -48,36 +48,37 @@ h3 {
 
 /* line 60, sass/ablank.scss */
 h1 {
-  text-align: center;
-  font-size: 2em;
+  text-align: left;
+  font-size: 1.4em;
   color: #444444;
   background: #111;
   border-bottom: 2px solid;
+  padding: .2em 0 .1em 2%;
 }
 
-/* line 68, sass/ablank.scss */
+/* line 69, sass/ablank.scss */
 h2 {
   font-size: 1.6em;
 }
 
-/* line 72, sass/ablank.scss */
+/* line 73, sass/ablank.scss */
 h3 {
   font-size: 1.2em;
 }
 
-/* line 76, sass/ablank.scss */
+/* line 77, sass/ablank.scss */
 p {
   line-height: 1.4em;
   padding: .4em .8em;
 }
 
-/* line 81, sass/ablank.scss */
+/* line 82, sass/ablank.scss */
 small {
   display: block;
   text-align: right;
 }
 
-/* line 86, sass/ablank.scss */
+/* line 87, sass/ablank.scss */
 a {
   color: #5990c8;
   background-repeat: no-repeat;
@@ -88,14 +89,13 @@ a {
   -webkit-transition: all 700ms;
   transition: all 700ms;
 }
-/* line 91, sass/ablank.scss */
+/* line 92, sass/ablank.scss */
 a:hover, a:focus {
   box-shadow: 0 0 1em 0 #5990c8;
 }
 
-/* line 96, sass/ablank.scss */
+/* line 97, sass/ablank.scss */
 header {
-  height: 190px;
   box-shadow: 0 0.8em 1em 0 rgba(17, 17, 17, 0.5);
 }
 /* line 99, sass/ablank.scss */
@@ -109,14 +109,15 @@ header h2 {
 header h3 {
   font-size: 3.3em;
   text-decoration: overline;
+  padding: 0.4em 0 .5em 0.4em;
 }
 
-/* line 111, sass/ablank.scss */
+/* line 112, sass/ablank.scss */
 footer {
   border-top: 1px solid;
 }
 
-/* line 122, sass/ablank.scss */
+/* line 123, sass/ablank.scss */
 .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -129,7 +130,7 @@ footer {
   */
 }
 
-/* line 135, sass/ablank.scss */
+/* line 136, sass/ablank.scss */
 #contact {
   position: absolute;
   top: 0;
@@ -144,7 +145,7 @@ footer {
   background-color: rgba(253, 253, 253, 0.5);
 }
 
-/* line 149, sass/ablank.scss */
+/* line 150, sass/ablank.scss */
 #page-wrap {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
@@ -153,7 +154,7 @@ footer {
   flex-direction: column;
 }
 
-/* line 153, sass/ablank.scss */
+/* line 154, sass/ablank.scss */
 #content {
   width: 80%;
   margin: 0 auto;
@@ -185,7 +186,7 @@ footer {
   */
 }
 
-/* line 184, sass/ablank.scss */
+/* line 185, sass/ablank.scss */
 .project {
   width: 75%;
   min-width: 140px;
@@ -196,34 +197,34 @@ footer {
   box-shadow: 0 0 0.4em 0 rgba(17, 17, 17, 0.5);
   color: rgba(253, 253, 253, 0.8);
 }
-/* line 194, sass/ablank.scss */
+/* line 195, sass/ablank.scss */
 .project:visited {
   color: rgba(253, 253, 253, 0.7);
 }
-/* line 197, sass/ablank.scss */
+/* line 198, sass/ablank.scss */
 .project:hover {
   color: #FDFDFD;
   border-color: #004488;
   box-shadow: 0 0 0.4em 0.2em rgba(0, 68, 136, 0.5);
 }
-/* line 202, sass/ablank.scss */
+/* line 203, sass/ablank.scss */
 .project:hover p {
   color: #111;
 }
-/* line 205, sass/ablank.scss */
+/* line 206, sass/ablank.scss */
 .project:hover .github {
   opacity: 1;
 }
-/* line 208, sass/ablank.scss */
+/* line 209, sass/ablank.scss */
 .project:hover .demo {
   bottom: -1.2em;
 }
-/* line 212, sass/ablank.scss */
+/* line 213, sass/ablank.scss */
 .project p {
   color: rgba(17, 17, 17, 0.4);
   transition: color 700ms;
 }
-/* line 216, sass/ablank.scss */
+/* line 217, sass/ablank.scss */
 .project h3 a {
   z-index: 1;
   margin: 0 -.6em;
@@ -234,7 +235,7 @@ footer {
   background-size: 44px;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQxJREFUeNrsmusNgjAURlvjf9lAN5ANYBPcwBF0BEfQEdwEN8AJcIN6MYSgocYbTYP0nKRpAoH0OwX6CMYAAAAAAECM2LE0xDm3lSpRXFJaa8+T6QkRsJZSOx3FpB5HJCABCUhAAhKQgAQkIAEJwSTYgA1eSJUOnFq15ZV84FjiuYeGjawiT14BjVnPsjRXND5VLm1D00mwveA7qfYR7YU8JMwj3gw6SqebWeQ7YoeYBdya71pfQCWljCm8fAMuHw2D8q4sfzBUjWVk6MIHnQe8kZt9MbxqpT6F//eZYKGcBdbtHMcQnvCEJzzhCU94whOe8IQn/Jj+EcqUl1SyqrsaAAAAAAAAANByF2AAjt6xvmBARgwAAAAASUVORK5CYII=");
 }
-/* line 226, sass/ablank.scss */
+/* line 227, sass/ablank.scss */
 .project .github {
   opacity: 0.7;
   padding: 8px 0 8px 76px;
@@ -242,7 +243,7 @@ footer {
   background-size: 36px;
 }
 
-/* line 234, sass/ablank.scss */
+/* line 235, sass/ablank.scss */
 .github {
   padding: 16px 0 16px 76px;
   line-height: 32px;
@@ -252,12 +253,12 @@ footer {
   color: white;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5VJREFUeNrsW4uRokAQZUjAzQAzkAzgInAzwIuAzcDLwMtAMsAMMAPZCOQiYC+CuaGu2Zq1+Ez3fBh1u2qKKsWZ7kf/aVngmDjnG3F5Gfn6gzH27pIfZlnYRFxSsWJYa8WfNmLVsE6uQdEWWqyjWC03Ry3smfgseCbWldun7ozsGQX3CwhQ9Qtfni7OTUMcuOf+0d56FBCHrMTlDB7dR+qiRiqixl/jAED8Pk/EcF/oA0B4NwbAHQmPBoE9oPAoENiDCq8MAptxeDUiffWVurQ6HnOM4cQPTw8gfAAynMa+DMfiPBQxc/QKIXEnVgEq54IKODMFHuYoVc4TxI2Raio6ZDaQJLUWEp0W9l4NnKuaikezPkDcVCk+/ULY1c8J//FLrLcbh1SDTTYT6roGrZId7+9uvzE77ipF0Ig5Oos9fkw9/a3J1BPqhWwIeUVNzFTyfGRqvp3a6Gpko2UqUk4x3VB++kiv71NugOFlLT88OQq8EcLLPQLwRdawtzdFxyeTTxUhlpe090uhFM+xlHoEAIWXV9mJUDo7PjnBLaWTJCcvWDp42JQ9EORYUdBrh7IxDwBYETLQbUhwICdMy8kVAU8nrPMMCQ6k8Ljyw/KWMnAGMQJp5jEAnSlwxO11gLSZyvfiv+MRI1AYPDl9A/ANwJMTQ3rNR4sCeA2gdHccCh+5MIHYYwWIKQCcyWWkf4Tl7dwB0GAP8bUYIgDQhMH/VjWGXjzVgl2Ab43Vfeua33NJTCyF+WfLnfjj0iMASspD1N2AwxuZpYU/Enkv5U0yjXd2xyXMAdS+1OB7e7uhzgtNpzN7BmYT26FNDxNzeHtYFwUgchvZIrwrzA0NZX42ddlNGjmUE3wZMwHVKRRCTgNJVn+tVXuJYFIxtOvW0tUUrQUvf7AOJZfu2yBN5oLxE2DftqZQj3Nq1qq8Egd1VKUNQeU3loYsormD90rJg3r/rXQc3/XHaWfUr0Kqaq4BQG5Q+ItJ9UsGtOY68ieHSAOAxCAAG5PoVxM+JDEVBg0CkFMZmIoKmYOEJ7Hq9RWZqJYCwQAAlQkm5hzdkVvqE2oCgMo9TBQeV9CWPaTVFXyWLABAaaVAI5aergFA2TyqKwyTobvA3UwwhjqedmPTqzYqs8ojDagWeV8BuUK7IACtTqZp0kFOTYjbAGB0cnxpIG4bFlrd44Fub99wMSY4swRG/xf5ZrDxgPQ30Ayx8tf6fwIMABVgC65y6wJFAAAAAElFTkSuQmCC");
 }
-/* line 242, sass/ablank.scss */
+/* line 243, sass/ablank.scss */
 .github:hover {
   background-color: #2f5d8c;
 }
 
-/* line 247, sass/ablank.scss */
+/* line 248, sass/ablank.scss */
 .demo {
   font-size: .8em;
   z-index: 0;
@@ -272,10 +273,6 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-  /* line 261, sass/ablank.scss */
-  header {
-    height: 140px;
-  }
   /* line 263, sass/ablank.scss */
   header h2 {
     margin-top: .3em;
@@ -318,7 +315,11 @@ footer {
   .project {
     width: 100%;
   }
-  /* line 297, sass/ablank.scss */
+  /* line 298, sass/ablank.scss */
+  .project p {
+    color: #2b2b2b;
+  }
+  /* line 301, sass/ablank.scss */
   .project .github {
     opacity: 1;
   }
