@@ -95,33 +95,34 @@ a:hover, a:focus {
 
 /* line 98, sass/ablank.scss */
 header {
+  height: 190px;
   box-shadow: 0 0.8em 1em 0 rgba(17, 17, 17, 0.5);
 }
-/* line 101, sass/ablank.scss */
+/* line 102, sass/ablank.scss */
 header img {
   float: left;
   display: inline;
   padding: 0 1em 0 0;
 }
-/* line 107, sass/ablank.scss */
+/* line 108, sass/ablank.scss */
 header h2 {
   font-size: 5em;
   line-height: .75em;
   padding: 0;
   margin: .1em 0 0 160px;
 }
-/* line 116, sass/ablank.scss */
+/* line 117, sass/ablank.scss */
 header .github {
   margin-top: .2em;
   padding-left: 1em;
 }
 
-/* line 123, sass/ablank.scss */
+/* line 124, sass/ablank.scss */
 footer {
   border-top: 1px solid;
 }
 
-/* line 134, sass/ablank.scss */
+/* line 135, sass/ablank.scss */
 .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -133,7 +134,7 @@ footer {
   */
 }
 
-/* line 145, sass/ablank.scss */
+/* line 147, sass/ablank.scss */
 #page-wrap {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
@@ -142,7 +143,7 @@ footer {
   flex-direction: column;
 }
 
-/* line 149, sass/ablank.scss */
+/* line 151, sass/ablank.scss */
 #content {
   width: 80%;
   margin: 0 auto;
@@ -174,45 +175,45 @@ footer {
   */
 }
 
-/* line 181, sass/ablank.scss */
+/* line 184, sass/ablank.scss */
 .project {
   width: 33%;
   min-width: 140px;
   max-width: 240px;
-  margin: .4em;
+  margin: .4em auto;
   background-color: #FDFDFD;
   border: 1px solid rgba(17, 17, 17, 0.4);
   box-shadow: 0 0 0.4em 0 rgba(17, 17, 17, 0.5);
   color: rgba(253, 253, 253, 0.8);
 }
-/* line 190, sass/ablank.scss */
+/* line 193, sass/ablank.scss */
 .project:visited {
   color: rgba(253, 253, 253, 0.7);
 }
-/* line 193, sass/ablank.scss */
+/* line 196, sass/ablank.scss */
 .project:hover {
   color: #FDFDFD;
   border-color: #004488;
   box-shadow: 0 0 0.4em 0.2em rgba(0, 68, 136, 0.5);
 }
-/* line 198, sass/ablank.scss */
+/* line 201, sass/ablank.scss */
 .project:hover p {
   color: #111;
 }
-/* line 201, sass/ablank.scss */
+/* line 204, sass/ablank.scss */
 .project:hover .github {
   opacity: 1;
 }
-/* line 204, sass/ablank.scss */
+/* line 207, sass/ablank.scss */
 .project:hover .demo {
   bottom: -1.2em;
 }
-/* line 208, sass/ablank.scss */
+/* line 211, sass/ablank.scss */
 .project p {
   color: rgba(17, 17, 17, 0.4);
   transition: color 700ms;
 }
-/* line 212, sass/ablank.scss */
+/* line 215, sass/ablank.scss */
 .project h3 a {
   z-index: 1;
   margin: 0 -.6em;
@@ -223,12 +224,12 @@ footer {
   background-size: 44px;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQxJREFUeNrsmusNgjAURlvjf9lAN5ANYBPcwBF0BEfQEdwEN8AJcIN6MYSgocYbTYP0nKRpAoH0OwX6CMYAAAAAAECM2LE0xDm3lSpRXFJaa8+T6QkRsJZSOx3FpB5HJCABCUhAAhKQgAQkIAEJwSTYgA1eSJUOnFq15ZV84FjiuYeGjawiT14BjVnPsjRXND5VLm1D00mwveA7qfYR7YU8JMwj3gw6SqebWeQ7YoeYBdya71pfQCWljCm8fAMuHw2D8q4sfzBUjWVk6MIHnQe8kZt9MbxqpT6F//eZYKGcBdbtHMcQnvCEJzzhCU94whOe8IQn/Jj+EcqUl1SyqrsaAAAAAAAAANByF2AAjt6xvmBARgwAAAAASUVORK5CYII=");
 }
-/* line 222, sass/ablank.scss */
+/* line 225, sass/ablank.scss */
 .project .github {
   opacity: 0.2;
 }
 
-/* line 226, sass/ablank.scss */
+/* line 229, sass/ablank.scss */
 .github {
   padding: 16px 0 16px 70px;
   line-height: 32px;
@@ -238,12 +239,12 @@ footer {
   color: white;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5VJREFUeNrsW4uRokAQZUjAzQAzkAzgInAzwIuAzcDLwMtAMsAMMAPZCOQiYC+CuaGu2Zq1+Ez3fBh1u2qKKsWZ7kf/aVngmDjnG3F5Gfn6gzH27pIfZlnYRFxSsWJYa8WfNmLVsE6uQdEWWqyjWC03Ry3smfgseCbWldun7ozsGQX3CwhQ9Qtfni7OTUMcuOf+0d56FBCHrMTlDB7dR+qiRiqixl/jAED8Pk/EcF/oA0B4NwbAHQmPBoE9oPAoENiDCq8MAptxeDUiffWVurQ6HnOM4cQPTw8gfAAynMa+DMfiPBQxc/QKIXEnVgEq54IKODMFHuYoVc4TxI2Raio6ZDaQJLUWEp0W9l4NnKuaikezPkDcVCk+/ULY1c8J//FLrLcbh1SDTTYT6roGrZId7+9uvzE77ipF0Ig5Oos9fkw9/a3J1BPqhWwIeUVNzFTyfGRqvp3a6Gpko2UqUk4x3VB++kiv71NugOFlLT88OQq8EcLLPQLwRdawtzdFxyeTTxUhlpe090uhFM+xlHoEAIWXV9mJUDo7PjnBLaWTJCcvWDp42JQ9EORYUdBrh7IxDwBYETLQbUhwICdMy8kVAU8nrPMMCQ6k8Ljyw/KWMnAGMQJp5jEAnSlwxO11gLSZyvfiv+MRI1AYPDl9A/ANwJMTQ3rNR4sCeA2gdHccCh+5MIHYYwWIKQCcyWWkf4Tl7dwB0GAP8bUYIgDQhMH/VjWGXjzVgl2Ab43Vfeua33NJTCyF+WfLnfjj0iMASspD1N2AwxuZpYU/Enkv5U0yjXd2xyXMAdS+1OB7e7uhzgtNpzN7BmYT26FNDxNzeHtYFwUgchvZIrwrzA0NZX42ddlNGjmUE3wZMwHVKRRCTgNJVn+tVXuJYFIxtOvW0tUUrQUvf7AOJZfu2yBN5oLxE2DftqZQj3Nq1qq8Egd1VKUNQeU3loYsormD90rJg3r/rXQc3/XHaWfUr0Kqaq4BQG5Q+ItJ9UsGtOY68ieHSAOAxCAAG5PoVxM+JDEVBg0CkFMZmIoKmYOEJ7Hq9RWZqJYCwQAAlQkm5hzdkVvqE2oCgMo9TBQeV9CWPaTVFXyWLABAaaVAI5aergFA2TyqKwyTobvA3UwwhjqedmPTqzYqs8ojDagWeV8BuUK7IACtTqZp0kFOTYjbAGB0cnxpIG4bFlrd44Fub99wMSY4swRG/xf5ZrDxgPQ30Ayx8tf6fwIMABVgC65y6wJFAAAAAElFTkSuQmCC");
 }
-/* line 234, sass/ablank.scss */
+/* line 237, sass/ablank.scss */
 .github:hover {
   background-color: #2f5d8c;
 }
 
-/* line 239, sass/ablank.scss */
+/* line 242, sass/ablank.scss */
 .demo {
   font-size: .8em;
   z-index: 0;
@@ -258,50 +259,53 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-  /* line 256, sass/ablank.scss */
+  /* line 258, sass/ablank.scss */
   header h2 {
     margin-top: .3em;
     font-size: 3em;
   }
-  /* line 260, sass/ablank.scss */
+  /* line 262, sass/ablank.scss */
   header .github {
     font-size: .8em;
     margin-top: .2em;
-    padding-left: 1.4em;
+    padding-left: 1.8em;
   }
 
-  /* line 267, sass/ablank.scss */
+  /* line 269, sass/ablank.scss */
   .github {
     background-size: 48px;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 274, sass/ablank.scss */
+  /* line 275, sass/ablank.scss */
+  header {
+    height: auto;
+  }
+  /* line 277, sass/ablank.scss */
   header img {
     float: none;
     display: block;
     margin: 0 auto;
   }
-  /* line 281, sass/ablank.scss */
+  /* line 284, sass/ablank.scss */
   header h2 {
     margin: 0;
   }
-  /* line 284, sass/ablank.scss */
+  /* line 287, sass/ablank.scss */
   header .github {
     font-size: .8em;
-    padding-left: 1.8em;
   }
 
-  /* line 290, sass/ablank.scss */
+  /* line 292, sass/ablank.scss */
   .github {
     background-size: 48px;
   }
 
-  /* line 294, sass/ablank.scss */
+  /* line 296, sass/ablank.scss */
   .project {
     width: 100%;
   }
-  /* line 297, sass/ablank.scss */
+  /* line 299, sass/ablank.scss */
   .project .github {
     opacity: 1;
   }
