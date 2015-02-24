@@ -15,11 +15,11 @@
 	<div id="page-wrap" class="wrapper">
 		<header>
 			<h1>ablank</h1>
+				<img src="images/ab_avatar.png" width=144 height=144 alt="Adam Blankenship" />
 			<div class="details">
-				<img src="" width=120 height=120 alt="Adam Blankenship" />
-				<p>Adam Blankenship</p>
-				<p><a href="https://github.com/ablank">My Github</a>
-				</p>
+				<h2>Adam Blankenship
+				<a href="https://github.com/ablank" class="github">My Github</a>
+				</h2>
 			</div>
 		</header>
 
@@ -29,13 +29,13 @@
 			<div class="wrapper">
 				<section>
 					<h3><a href="http://ablank.github.io/awt/">Adam's Web Tools</a></h3>
-					<p>Tools for the web on the web</p>
+					<p>Tools for web development on the web.</p>
 					<a href="http://github.com/ablank/awt" class="github">Git this project</a>
 				</section>
 
 				<section>
 					<h3><a href="http://ablank.github.io/phi/">Phi Calc</a></h3>
-					<p>Golden Section Calculator</p>
+					<p>Golden section proportions calculator.</p>
 					<a href="http://github.com/ablank/phi" class="github">Git this project</a>
 				</section>
 
@@ -46,15 +46,14 @@
 				</section>
 
 				<section>
-					<h3><a href="http://live-cellular.gotpantheon.com/">Cellular: Drupal 7 Base Theme</a></h3>
-					<p>Pwn Drupal's theme layer.</p>
+					<h3><a href="http://live-cellular.gotpantheon.com/">Cellular: Drupal 7</a></h3>
+					<p>Base theme that pwns Drupal's theme layer.</p>
 					<a href="http://github.com/ablank/cellular" class="github">Git this project</a>
 				</section>
 
 				<section>
 					<h3><a href="http://live-cellular.gotpantheon.com/cellular-ui">Cellular: UI</a></h3>
-
-					<p>Lightweight CSS/JS UI elements that use identical markup (an html list ), works well with Drupal Views.</p>
+					<p>Lightweight CSS/JS UI elements using identical markup.</p>
 					<a href="http://github.com/ablank/CellularUI" class="github">Git this project</a>
 				</section>
 			</div>
@@ -91,12 +90,15 @@
 
 			s.each(function () {
 				var t = $(this),
-					title = t.children();
-
+					title = t.children().first(),
+					link = title.find('a').attr('href');
+				if (typeof (link) != 'undefined') {
+					t.wrap('<a href="' + link + '" class="project" />');
+					title.append('<div class="demo">Demo</div>');
+				}
 				title.next().wrapAll('<div class="content"/>');
 
-stylize();
-
+				/*
 				title.hover(function () {
 					var content = t.nextAll('.content').clone();
 						$('#display').html(content);
@@ -106,6 +108,7 @@ stylize();
 						console.log('leave');
 						$('#display').html('');
 					});
+					*/
 			});
 
 
