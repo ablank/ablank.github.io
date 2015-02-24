@@ -323,4 +323,17 @@ footer {
   .project .github {
     opacity: 1;
   }
+
+  /* line 306, sass/ablank.scss */
+  #contact {
+    position: relative;
+    width: 100%;
+    height: auto;
+    line-height: 1em;
+    border-radius: 0;
+    border: none;
+    color: #FDFDFD;
+    background: #5990c8;
+    padding: .8em;
+  }
 }
