@@ -1,0 +1,174 @@
+/* line 9, sass/ablank.scss */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* line 17, sass/ablank.scss */
+header,
+footer {
+  width: 100%;
+  line-height: 1.4em;
+  min-width: 140px;
+  color: #2b2b2b;
+  background-color: #e4e4e4;
+  font-family: sans-serif;
+}
+
+/* line 27, sass/ablank.scss */
+div,
+h2,
+h3,
+p,
+a,
+section {
+  position: relative;
+  display: block;
+}
+
+/* line 37, sass/ablank.scss */
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: .4em .4em .2em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+
+/* line 46, sass/ablank.scss */
+h1 {
+  text-align: center;
+  font-size: 2em;
+  background: rgba(17, 17, 17, 0.3);
+}
+
+/* line 52, sass/ablank.scss */
+h2 {
+  font-size: 1.6em;
+  text-indent: -999em;
+}
+
+/* line 57, sass/ablank.scss */
+h3 {
+  font-size: 1.2em;
+}
+
+/* line 63, sass/ablank.scss */
+a {
+  transition: all 700ms;
+}
+
+/* line 67, sass/ablank.scss */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* line 73, sass/ablank.scss */
+#page-wrap {
+  flex-direction: column;
+}
+
+/* line 77, sass/ablank.scss */
+#content {
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 80, sass/ablank.scss */
+#content section {
+  width: 33%;
+  min-width: 140px;
+  max-width: 240px;
+  margin: .4em;
+  padding: 1em 1.2em;
+  background-color: rgba(253, 253, 253, 0.5);
+  border: 1px solid rgba(17, 17, 17, 0.5);
+  transition: all 700ms;
+  /*
+  		&:nth-child(1) {
+  	background:#063;
+  }
+  		&:nth-child(2) {
+  	background:#063;
+  }
+  		&:nth-child(3) {
+  	background:#063;
+  }
+  		&:nth-child(4) {
+  	background:#063;
+  }
+  		&:nth-child(5) {
+  	background:#063;
+  }
+  		&:nth-child(6) {
+  	background:#063;
+  }
+  		&:nth-child(7) {
+  	background:#063;
+  }	
+  */
+}
+/* line 89, sass/ablank.scss */
+#content section:hover {
+  border-color: #111;
+}
+/* line 91, sass/ablank.scss */
+#content section:hover p {
+  color: #323232;
+}
+/* line 95, sass/ablank.scss */
+#content section p {
+  color: rgba(250, 250, 250, 0);
+  transition: color 700ms;
+}
+/* line 99, sass/ablank.scss */
+#content section a {
+  background-color: #323232;
+  color: white;
+}
+/* line 102, sass/ablank.scss */
+#content section a:hover {
+  background-color: rgba(50, 50, 50, 0.5);
+  color: white;
+}
+/* line 107, sass/ablank.scss */
+#content section h3 a {
+  background-color: black;
+  color: white;
+  margin: 0 -1em;
+  padding: .5em;
+}
+/* line 112, sass/ablank.scss */
+#content section h3 a:hover {
+  background-color: grey;
+  color: light-grey;
+}
+
+/* line 145, sass/ablank.scss */
+.details img {
+  float: left;
+  margin: .4em;
+}
+/* line 149, sass/ablank.scss */
+.details p {
+  padding: .5em;
+}
+
+/* line 154, sass/ablank.scss */
+.github {
+  padding: 16px 0 16px 36px;
+  line-height: 36px;
+  background-image: url("../images/GitHub-Mark/PNG/GitHub-Mark-32px.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+/* line 162, sass/ablank.scss */
+.github:hover {
+  background-color: #EEE;
+}
