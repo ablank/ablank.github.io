@@ -246,7 +246,7 @@ footer {
 
 /* line 239, sass/ablank.scss */
 .github {
-  padding: 16px 0 16px 70px;
+  padding: 16px 0 16px 76px;
   line-height: 32px;
   font-family: Arial, Helvetica, sans-serif;
   background-position: .2em center;
@@ -317,21 +317,12 @@ footer {
     font-size: 1.4em;
     text-align: center;
   }
-  /* line 308, sass/ablank.scss */
-  header .github {
-    font-size: .8em;
-  }
 
-  /* line 313, sass/ablank.scss */
-  .github {
-    background-size: 48px;
-  }
-
-  /* line 317, sass/ablank.scss */
+  /* line 310, sass/ablank.scss */
   .project {
     width: 100%;
   }
-  /* line 320, sass/ablank.scss */
+  /* line 313, sass/ablank.scss */
   .project .github {
     opacity: 1;
   }
