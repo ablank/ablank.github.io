@@ -1,0 +1,125 @@
+@import 'compass';
+@import 'typography';
+//@import 'mediaquery';
+
+$green: #76c7c0;
+$green_light: #76caca;
+$red: #e8645a;
+$bg: #f3f3f3;
+$p_color: #7f8c8c;
+$pad: 1em;
+$radius: 0.4em;
+
+body {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background-color: $bg;
+  color: $p_color;
+}
+
+a {
+  transition: all 400ms;
+}
+.header {
+  background-color: $green;
+  background-image: url(../assets/images/header_deco.png);
+  background-position: bottom left;
+  background-repeat: repeat-x;
+}
+
+.hilight {
+  background-color: darken($bg, 3%);
+
+  btn-lg,
+  btn-sm {
+    background-color: $red;
+  }
+}
+
+.branding {
+  text-indent: -999em;
+  width: 72px;
+  height: 36px;
+  float: left;
+  margin-left: 10%;
+  background-image: url(../assets/images/logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.btn-lg,
+.btn-sm {
+  background-color: $green;
+  color: white;
+  border-radius: $radius;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($red, 5%);
+    color: white;
+  }
+}
+.readmore {
+  position: relative;
+  top: 1em;
+  padding: 1em 2em;
+}
+
+.fa-search {
+  color: white;
+  font-size: 1em;
+}
+
+.mostuff {
+
+  .fa {
+    transition: color 400ms;
+    font-size: 57px;
+    text-align: center;
+    color: $green;
+  }
+
+  > div {
+    transition: background 400ms;
+    text-align: center;
+    background-color: lighten($bg, 3%);
+    padding: 1em;
+    border-radius: $radius;
+
+    p {
+      text-align: left;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: white;
+
+      .readmore {
+        background-color: $red;
+      }
+      .fa {
+        color: $red;
+      }
+    }
+  }
+}
+
+.carousel {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.row [class*='col-']:not(:first-child):not(:last-child) {
+  padding-right:$pad;
+  padding-left:$pad;
+}
+/* add gutter to grid elements */
+.row [class*='col-']:first-child {
+  padding-right:$pad;
+}
+/* remove left padding from first column */
+.row [class*='col-']:last-child {
+  padding-left:$pad;
+}

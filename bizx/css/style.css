@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2) format("woff2");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url(https://fonts.gstatic.com/s/opensans/v13/xjAJXh38I15wypJXxuGMBo4P5ICox8Kq3LLUNMylGO4.woff2) format("woff2");
+}
+/* line 13, ../sass/style.scss */
+body {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background-color: #f3f3f3;
+  color: #7f8c8c;
+}
+
+/* line 20, ../sass/style.scss */
+a {
+  transition: all 400ms;
+}
+
+/* line 23, ../sass/style.scss */
+.header {
+  background-color: #76c7c0;
+  background-image: url(../assets/images/header_deco.png);
+  background-position: bottom left;
+  background-repeat: repeat-x;
+}
+
+/* line 30, ../sass/style.scss */
+.hilight {
+  background-color: #ebebeb;
+}
+/* line 33, ../sass/style.scss */
+.hilight btn-lg,
+.hilight btn-sm {
+  background-color: #e8645a;
+}
+
+/* line 39, ../sass/style.scss */
+.branding {
+  text-indent: -999em;
+  width: 72px;
+  height: 36px;
+  float: left;
+  margin-left: 10%;
+  background-image: url(../assets/images/logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* line 50, ../sass/style.scss */
+.btn-lg,
+.btn-sm {
+  background-color: #76c7c0;
+  color: white;
+  border-radius: 0.4em;
+}
+/* line 56, ../sass/style.scss */
+.btn-lg:hover, .btn-lg:focus,
+.btn-sm:hover,
+.btn-sm:focus {
+  background-color: #eb7970;
+  color: white;
+}
+
+/* line 62, ../sass/style.scss */
+.readmore {
+  position: relative;
+  top: 1em;
+  padding: 1em 2em;
+}
+
+/* line 68, ../sass/style.scss */
+.fa-search {
+  color: white;
+  font-size: 1em;
+}
+
+/* line 75, ../sass/style.scss */
+.mostuff .fa {
+  transition: color 400ms;
+  font-size: 57px;
+  text-align: center;
+  color: #76c7c0;
+}
+/* line 82, ../sass/style.scss */
+.mostuff > div {
+  transition: background 400ms;
+  text-align: center;
+  background-color: #fbfbfb;
+  padding: 1em;
+  border-radius: 0.4em;
+}
+/* line 89, ../sass/style.scss */
+.mostuff > div p {
+  text-align: left;
+}
+/* line 93, ../sass/style.scss */
+.mostuff > div:hover, .mostuff > div:focus {
+  background-color: white;
+}
+/* line 97, ../sass/style.scss */
+.mostuff > div:hover .readmore, .mostuff > div:focus .readmore {
+  background-color: #e8645a;
+}
+/* line 100, ../sass/style.scss */
+.mostuff > div:hover .fa, .mostuff > div:focus .fa {
+  color: #e8645a;
+}
+
+/* line 108, ../sass/style.scss */
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 114, ../sass/style.scss */
+.row [class*='col-']:not(:first-child):not(:last-child) {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+/* add gutter to grid elements */
+/* line 119, ../sass/style.scss */
+.row [class*='col-']:first-child {
+  padding-right: 1em;
+}
+
+/* remove left padding from first column */
+/* line 123, ../sass/style.scss */
+.row [class*='col-']:last-child {
+  padding-left: 1em;
+}
