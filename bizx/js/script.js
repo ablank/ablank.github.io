@@ -1,12 +1,13 @@
 (function ($) {
-  var search = $('#site-search'),
-    form = search.next();
+  var icon = $('#site-search').find('i'),
+    form = icon.next();
 
   form.hide();
-  search.css('cursor', 'pointer')
+  icon.css('cursor', 'pointer')
     .on('mouseover', function () {
-      search.addClass('close');
-      form.show();
+      icon.toggleClass('fa-times fa-search');
+      form.slideToggle();
     });
+
   console.log('Never mistake motion for action.');
 })(jQuery);

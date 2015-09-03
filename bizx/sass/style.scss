@@ -11,29 +11,36 @@ $pad: 1em;
 $radius: 0.4em;
 
 body {
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 400;
   background-color: $bg;
   color: $p_color;
+  padding: 0 0 3em 0;
 }
 
 a {
   transition: all 400ms;
 }
+
+#site-search {
+  color: white;
+  float: left;
+  font-size: 1.2em;
+
+  form {
+    position: absolute;
+    bottom: -2.6em;
+    right: 0;
+    min-width: 320px;
+  }
+}
+
 .header {
+  min-height: 85px;
   background-color: $green;
   background-image: url(../assets/images/header_deco.png);
   background-position: bottom left;
   background-repeat: repeat-x;
-}
-
-.hilight {
-  background-color: darken($bg, 3%);
-
-  btn-lg,
-  btn-sm {
-    background-color: $red;
-  }
 }
 
 .branding {
@@ -51,26 +58,68 @@ a {
 .btn-sm {
   background-color: $green;
   color: white;
+  border: darken($green, 5%) 2px solid;
   border-radius: $radius;
 
   &:hover,
   &:focus {
     background-color: lighten($red, 5%);
+    border-color: $red;
     color: white;
   }
-}
-.readmore {
-  position: relative;
-  top: 1em;
-  padding: 1em 2em;
-}
-
-.fa-search {
-  color: white;
-  font-size: 1em;
+  &.readmore {
+    position: relative;
+    top: 1em;
+    padding: 1em 2em;
+  }
 }
 
-.mostuff {
+.hilight {
+  background-color: darken($bg, 3%);
+  margin: 3.4em 0;
+
+  p {
+    // float: left;
+  }
+
+  .btn-lg,
+  .btn-sm {
+    position: relative;
+    background-color: $red;
+    border: darken($red, 5%) 2px solid;
+    float: right;
+    bottom: 1em;
+  }
+}
+
+.content-list {
+  transition: background 400ms;
+  text-align: center;
+  background-color: lighten($bg, 3%);
+  padding: 1em;
+  border-radius: $radius;
+
+  h3 {
+    font-size: 1.2em;
+    margin: 0.4em 0 1.2em
+  }
+
+  p {
+    text-align: left;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: white;
+
+    .readmore {
+      background-color: $red;
+      border-color: darken($red, 5%);
+    }
+    .fa {
+      color: $red;
+    }
+  }
 
   .fa {
     transition: color 400ms;
@@ -78,31 +127,8 @@ a {
     text-align: center;
     color: $green;
   }
-
-  > div {
-    transition: background 400ms;
-    text-align: center;
-    background-color: lighten($bg, 3%);
-    padding: 1em;
-    border-radius: $radius;
-
-    p {
-      text-align: left;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: white;
-
-      .readmore {
-        background-color: $red;
-      }
-      .fa {
-        color: $red;
-      }
-    }
-  }
 }
+
 
 .carousel {
   img {

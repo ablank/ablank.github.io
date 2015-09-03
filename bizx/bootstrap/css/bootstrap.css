@@ -4213,9 +4213,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 50px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
+  min-height: 85px;
+  margin-right: 10%;
 }
 @media (min-width: 768px) {
   .navbar {
@@ -4363,19 +4362,22 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
+.navbar-nav {
+  margin: 1.8em -15px 0;
+}
+
+.navbar-nav > li > a {
+  padding: .4em 1em;
+  line-height: 20px;
+  border-radius: 0.2em;
+}
+
 @media (min-width: 768px) {
   .navbar-toggle {
     display: none;
   }
 }
-.navbar-nav {
-  margin: 7.5px -15px;
-}
-.navbar-nav > li > a {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  line-height: 20px;
-}
+
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
@@ -4402,14 +4404,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-nav {
     float: left;
-    margin: 0;
   }
   .navbar-nav > li {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
   }
 }
 .navbar-form {
@@ -4534,7 +4533,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-right {
     float: right !important;
-    margin-right: -15px;
+
   }
   .navbar-right ~ .navbar-right {
     margin-right: 0;
@@ -6445,7 +6444,7 @@ button.close {
 .carousel-indicators li {
   display: inline-block;
   width: 4em;
-  height: 0.2em;
+  height: 0.3em;
   margin: 1px 2px;
   text-indent: -999px;
   cursor: pointer;

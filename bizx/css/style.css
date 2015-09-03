@@ -16,38 +16,49 @@
   font-weight: 400;
   src: local("Open Sans Italic"), local("OpenSans-Italic"), url(https://fonts.gstatic.com/s/opensans/v13/xjAJXh38I15wypJXxuGMBo4P5ICox8Kq3LLUNMylGO4.woff2) format("woff2");
 }
+/* line 20, ../sass/_typography.scss */
+h2, h3 {
+  font-weight: bold;
+}
+
 /* line 13, ../sass/style.scss */
 body {
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 400;
   background-color: #f3f3f3;
   color: #7f8c8c;
+  padding: 0 0 3em 0;
 }
 
-/* line 20, ../sass/style.scss */
+/* line 21, ../sass/style.scss */
 a {
   transition: all 400ms;
 }
 
-/* line 23, ../sass/style.scss */
+/* line 25, ../sass/style.scss */
+#site-search {
+  color: white;
+  float: left;
+  font-size: 1.2em;
+}
+/* line 30, ../sass/style.scss */
+#site-search form {
+  position: absolute;
+  bottom: -2.6em;
+  right: 0;
+  min-width: 320px;
+}
+
+/* line 38, ../sass/style.scss */
 .header {
+  min-height: 85px;
   background-color: #76c7c0;
   background-image: url(../assets/images/header_deco.png);
   background-position: bottom left;
   background-repeat: repeat-x;
 }
 
-/* line 30, ../sass/style.scss */
-.hilight {
-  background-color: #ebebeb;
-}
-/* line 33, ../sass/style.scss */
-.hilight btn-lg,
-.hilight btn-sm {
-  background-color: #e8645a;
-}
-
-/* line 39, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 .branding {
   text-indent: -999em;
   width: 72px;
@@ -59,86 +70,103 @@ a {
   background-position: center center;
 }
 
-/* line 50, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 .btn-lg,
 .btn-sm {
   background-color: #76c7c0;
   color: white;
+  border: #64c0b8 2px solid;
   border-radius: 0.4em;
 }
-/* line 56, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 .btn-lg:hover, .btn-lg:focus,
 .btn-sm:hover,
 .btn-sm:focus {
   background-color: #eb7970;
+  border-color: #e8645a;
   color: white;
 }
-
-/* line 62, ../sass/style.scss */
-.readmore {
+/* line 70, ../sass/style.scss */
+.btn-lg.readmore,
+.btn-sm.readmore {
   position: relative;
   top: 1em;
   padding: 1em 2em;
 }
 
-/* line 68, ../sass/style.scss */
-.fa-search {
-  color: white;
-  font-size: 1em;
+/* line 77, ../sass/style.scss */
+.hilight {
+  background-color: #ebebeb;
+  margin: 3.4em 0;
+}
+/* line 85, ../sass/style.scss */
+.hilight .btn-lg,
+.hilight .btn-sm {
+  position: relative;
+  background-color: #e8645a;
+  border: #e54f44 2px solid;
+  float: right;
+  bottom: 1em;
 }
 
-/* line 75, ../sass/style.scss */
-.mostuff .fa {
-  transition: color 400ms;
-  font-size: 57px;
-  text-align: center;
-  color: #76c7c0;
-}
-/* line 82, ../sass/style.scss */
-.mostuff > div {
+/* line 95, ../sass/style.scss */
+.content-list {
   transition: background 400ms;
   text-align: center;
   background-color: #fbfbfb;
   padding: 1em;
   border-radius: 0.4em;
 }
-/* line 89, ../sass/style.scss */
-.mostuff > div p {
+/* line 102, ../sass/style.scss */
+.content-list h3 {
+  font-size: 1.2em;
+  margin: 0.4em 0 1.2em;
+}
+/* line 107, ../sass/style.scss */
+.content-list p {
   text-align: left;
 }
-/* line 93, ../sass/style.scss */
-.mostuff > div:hover, .mostuff > div:focus {
+/* line 111, ../sass/style.scss */
+.content-list:hover, .content-list:focus {
   background-color: white;
 }
-/* line 97, ../sass/style.scss */
-.mostuff > div:hover .readmore, .mostuff > div:focus .readmore {
+/* line 115, ../sass/style.scss */
+.content-list:hover .readmore, .content-list:focus .readmore {
   background-color: #e8645a;
+  border-color: #e54f44;
 }
-/* line 100, ../sass/style.scss */
-.mostuff > div:hover .fa, .mostuff > div:focus .fa {
+/* line 119, ../sass/style.scss */
+.content-list:hover .fa, .content-list:focus .fa {
   color: #e8645a;
 }
+/* line 124, ../sass/style.scss */
+.content-list .fa {
+  transition: color 400ms;
+  font-size: 57px;
+  text-align: center;
+  color: #76c7c0;
+}
 
-/* line 108, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .carousel img {
   width: 100%;
   height: auto;
 }
 
-/* line 114, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .row [class*='col-']:not(:first-child):not(:last-child) {
   padding-right: 1em;
   padding-left: 1em;
 }
 
 /* add gutter to grid elements */
-/* line 119, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .row [class*='col-']:first-child {
   padding-right: 1em;
 }
 
 /* remove left padding from first column */
-/* line 123, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 .row [class*='col-']:last-child {
   padding-left: 1em;
 }
