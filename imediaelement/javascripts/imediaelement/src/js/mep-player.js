@@ -276,7 +276,7 @@
         // remove native controls
         t.$media.removeAttr('controls');
         var videoPlayerTitle = t.isVideo ?
-          mejs.i18n.t('Video Player') : mejs.i18n.t('Audio Player');
+          'Video Player' : 'Audio Player';
         // insert description for screen readers
         $('<span class="mejs-offscreen">' + videoPlayerTitle + '</span>').insertBefore(t.$media);
         // build container
@@ -943,10 +943,7 @@
     },
     buildposter: function (player, controls, layers, media) {
       var t = this,
-        poster =
-        $('<div class="mejs-poster mejs-layer">' +
-          '</div>')
-        .appendTo(layers),
+        poster = $('<div class="mejs-poster mejs-layer" />').appendTo(layers),
         posterUrl = player.$media.attr('poster');
 
       // prioriy goes to option (this is useful if you need to support iOS 3.x (iOS completely fails with poster)
@@ -973,14 +970,8 @@
     },
     setPoster: function (url) {
       var t = this,
-        posterDiv = t.container.find('.mejs-poster'),
-        posterImg = posterDiv.find('img');
+        posterDiv = t.container.find('.mejs-poster');
 
-      if (posterImg.length === 0) {
-        posterImg = $('<img width="100%" height="100%" />').appendTo(posterDiv);
-      }
-
-      posterImg.attr('src', url);
       posterDiv.css({'background-image': 'url(' + url + ')'});
     },
     buildoverlays: function (player, controls, layers, media) {
