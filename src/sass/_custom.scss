@@ -1,0 +1,215 @@
+/**
+* @file Custom styles
+*/
+@import "variables";
+$bwidth: 7em;
+$bwidth2: calc($bwidth / 2);
+
+@mixin smallify() {
+  #header {
+    height: $bwidth2;
+    box-shadow: 0 0 0.5em 0.1em opacify($dark, 0.8);
+
+    h1 {
+      font-size: 1.5em;
+      margin: 0.5em 0 0 7%;
+    }
+    h3 {
+      font-size: 1em;
+      margin: 0 0 0 7%;
+    }
+  }
+
+  #contact {
+    top: 0;
+    right: 7%;
+    //width: calc($bwidth2 * 0.9);
+    height: calc($bwidth2 * 0.9);
+    line-height: calc($bwidth2 * 0.9);
+    display: block;
+    //border-radius: 0;
+  }
+}
+
+@keyframes circle2Square {
+  0% {
+    border-radius: 50%;
+    width: $bwidth;
+    height: $bwidth;
+  }
+  30% {
+    border-radius: 0%;
+    width: $bwidth;
+    height: $bwidth;
+  }
+  100% {
+    border-radius: 50%;
+  }
+}
+@keyframes square2circle {
+  0% {
+    border-radius: 50%;
+    width: $bwidth;
+    height: $bwidth;
+  }
+  30% {
+    border-radius: 0%;
+    width: $bwidth;
+    height: $bwidth;
+  }
+  100% {
+    border-radius: 50%;
+  }
+}
+
+a {
+  color: $hilight;
+  background-repeat: no-repeat;
+  @include transition();
+
+  &:visited {
+    color: $hilight-dark;
+  }
+  &:hover,
+  &:focus {
+    @include box-shadow();
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  &.grid {
+    column-gap: 1em;
+    row-gap: 1em;
+    grid-template-rows: 0fr 1fr 2.4em;
+    grid-template-columns: 1fr;
+  }
+  h3 {
+    font-size: $size-large;
+    padding: 1em 0.4em 0.4em 1em;
+  }
+  p {
+    padding: 0 1.4em;
+  }
+}
+
+#header {
+  background: $swatch-black;
+  box-shadow: 0 0 1em 0.1em opacify($swatch-grey, 0.7);
+  transition: all 500ms ease;
+
+  h1 {
+    z-index: 4;
+    font-size: 3.4em;
+    margin: 0.85em 0 0 0.85em;
+    padding: 0;
+    text-align: left;
+    color: $hilight;
+    transition: all 300ms ease 100ms;
+  }
+
+  h3 {
+    z-index: 3;
+    font-size: 2.25em;
+    margin: -0.4em 0 0 1.2em;
+    padding: 0;
+    text-decoration: overline;
+    color: $hilight-dark;
+    transition: all 300ms ease 200ms;
+  }
+}
+
+#header-bottom {
+  a.github {
+    &,
+    &:visited {
+      padding: 1.6em 1em 1em 10%;
+      background-color: $light;
+      color: $grey-light;
+      background-position: left 6% bottom 1em;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $light;
+      color: $grey-dark;
+      background-position: left 6.3% bottom 1em;
+    }
+  }
+}
+
+#content-wrap {
+  background-color: $swatch-cream;
+}
+#content {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+#contact {
+  z-index: 5;
+  position: absolute;
+  top: 2em;
+  right: 5%;
+  width: $bwidth;
+  height: $bwidth;
+  line-height: $bwidth;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+  border: $swatch-black 1px solid;
+  border-radius: 50%;
+  background-color: $swatch-white;
+  box-shadow: 0 0 1px 1px $hilight-dark;
+  transition: all 500ms ease 200ms;
+}
+
+a.jCard {
+  border: darken($swatch-white, 25%);
+  box-shadow: $size-nano $size-nano $size-nano 0 darken($hilight, 30%);
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: $swatch-grey;
+    box-shadow: $size-tiny $size-tiny 0.75em 0 $shadow;
+  }
+}
+a.github {
+  &,
+  &:visited {
+    font-weight: bold;
+    background-color: $hilight-dark;
+    color: $light;
+    display: block;
+    padding: 0.5em 1em 0.7em 4em;
+    backface-visibility: hidden;
+    background-position: left 1em center;
+    background-image: url(../assets/icons/png/github-octo.png);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEAElEQVRYhe1XW0vrWBQu/q6ZOTM/QF+8to4iihesKOdRUIKoqNOKF8Q74rONSYmS4MsZT2O9vyiCaKCiDzYinGOrVuOla/g2k5K2iSdTfRrOggXt7t7f+vba61aP56e4FI7jigRB+FNV1Yimad/j8bjx8PBA0MvLSwNrqqp+FUXR9+GGFUUZ0XXdIIvc3d3RxcUFU3y2CsgpihLE2XcZ53n+j7OzM4b++vpK0WiUgsEgVVVVUXFxcZZ6vV4aHh5me7AXEovFbnme/60g46urq+3JZJIh7ezsUGtra55RJ8VenIEkEol0OBz+/F+Nf35+fqaXlxeanp6msrIyqq+vd00A2tLSQrOzswwDWJIktbsyLknSJ9wcB3t6ehhYTU0N3d7e0uDgoCvj4+PjLDhLSkoYBrDgiVAo9PubxjmOKzLfHDc3AUHAlPX1dVpcXHTU7e3tzF4QwHl44t+YSL4ZmLIsj5pvbr1RbW0tFSImAeju7i5bUxQl4Hh7XdcNRHBuwC0vLxdEYG5uLoPh9/tZdqBm2BIQRZH5GWlkNV5XV8fesBBJpVJUXl6ewdrc3GTrgiB48whEo9EIfkSeWwkgt98j3d3deViqqq7nEdA07Tt+REGxEoAb3yPWC/l8PrZ2enr6LY+ArusGSmpuSpkRXKgEAoEsvPv7e1aq8wikUqk06nouAeT+e6SzszMLDzZgy5bA+fl5ZmN1dTW1tbWxGxQqT09P1NHRQZWVlRlc2LAloOu6cXNzQ6OjoyibrBacnJygeODNCiJwdXXFMFADgDkyMkKwYfsEmqZ9S6fTNDMzgzShgYEBamhoyIqFx8dHV4bxzijHKESNjY3sGYEJDNiwDUJVVb/i8NDQUMZoaWkpayrmd7iyv7+fJiYmaGVlJdN2IchxrPf19VFFRYVtjzDjSVXVL3aFyGdXiDiOo4ODAxYP1uKUTCazbg0yXV1dbzYps08IglBhW4rj8Tgrxc3NzVkH8RzobmNjY8ytCwsLrDpCr6+vGahhGMwLTsabmprMUvzocRJFUYJ2zQgK9wIARGDs8PCQjo6OaH5+nhEJhUJ0fHzsSGBvb48RlWV5yJEAx3FFGKOwEQZzQRBQcPPGxgbekd0YaYrnQPt2IjA5OcmMx2KxxA/nRFEUfzUHEgScHSAi2i2B3t5ecyB5XVpa+uRxI5IktWOMgk5NTTkS2NraepMAbm4ZyfyujJuiKIofrM2YsM4IPyKAgNvf32duB0Y4HHY3D+YKRmqMUQBCAYHL0d3W1tbyCKCAofIh1SxjeUIQhF88H/DHJIBJxpr3yAZ0T13XGTmoKUg1WZb/8ny0CILgxTCBUgpCaCpQfMZaJBL5m+f5yg837Pk/yz+zJtd4OxTw8wAAAABJRU5ErkJggg==);
+  }
+  &:visited {
+    background-color: darken($hilight-dark, 10%);
+  }
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: $hilight;
+    color: $light;
+    //background-position: left 1.5em center;
+  }
+}
+@include mediaquery($mediaquery-narrow) {
+  @include smallify();
+}
+
+.scrolled {
+  //  Cellular adds .scrolled to body as the page is scrolled
+  @include smallify();
+}

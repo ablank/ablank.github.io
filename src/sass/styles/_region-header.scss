@@ -1,0 +1,44 @@
+/**
+  * @file src\sass\styles\_region-header.scss
+  * Content region styles
+*/
+
+#header {
+  display: block;
+  position: $region-header-position;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: $header-height;
+  background: $dark-bg;
+  box-shadow: 0 0 1em 0.1em $light;
+  will-change: height;
+}
+
+#header-top {
+  z-index: 4;
+
+  /* Position contents left or right */
+  text-align: right;
+  color: $dark-bg;
+  border-bottom: $default-border;
+  background: $dark;
+
+  /* Custom type for region */
+  div {
+    display: inline;
+  }
+
+  h2,
+  h3,
+  h4 {
+    display: inline;
+    color: $dark-bg;
+    font-size: 1em;
+  }
+}
+
+#header-bottom {
+  color: $dark-bg;
+  background-color: $light;
+}

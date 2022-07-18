@@ -1,0 +1,20 @@
+/**
+  * @file
+  * Content region styles
+*/
+
+article,
+#content,
+.content {
+  background: $dark-bg;
+  z-index: 2;
+}
+
+#content {
+}
+
+#content-top {
+}
+
+#content-bottom {
+}

@@ -1,0 +1,25 @@
+/**
+  * @file styles/_region-wrappers.scss
+  * Content region styles
+*/
+
+#page-wrap {
+  @if ($region-header-position == "absolute" OR "fixed") {
+    padding-top: $header_height;
+  }
+}
+
+.container {
+  margin: auto;
+
+  &.grid {
+    display: grid;
+  }
+  &.flex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}

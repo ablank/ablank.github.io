@@ -1,0 +1,60 @@
+/**
+  * @file
+  * Printed page styling
+*/
+
+@import "variables";
+
+@media print {
+  img,
+  p {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+    color: $hilight;
+
+    &::after {
+      content: " (" attr(href) ")";
+    }
+  }
+
+  pre,
+  code,
+  blockquote {
+    border: 1px solid $light;
+    page-break-inside: avoid;
+  }
+
+  pre,
+  code a::after {
+    content: none;
+  }
+
+  #app,
+  #content-wrap,
+  #content-main {
+    width: 100%;
+  }
+
+  #header,
+  #footer,
+  .hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
