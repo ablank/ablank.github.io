@@ -1,0 +1,2408 @@
+/**
+  * @file
+  * Cellular Responsive sCSS framework
+  *
+  * @author
+  * Adam Blankenship
+*/
+/***
+* SASS Configuration Variables
+***/
+/* Import variables as defined in style-dictionary and mixins/libraries (i.e. bourbon, etc.) */
+/**
+* @file 
+* Mixins index.
+* 
+* Comment out any components that will not be used,
+* for best performance/smallest file size.
+*/
+/**
+  * @file
+  // Cellular SASS mixins
+  //    tread with caution
+  //                      ^    ^
+  //                     / \  //\
+  //       |\___/|      /   \//  \
+  //       /O  O  \__  /    //  | \
+  //      /     /  \/_/    //   |  \
+  //      @___@'    \/_   //    |   \
+  //         |       \/_ //     |    \
+  //         |        \///      |     \
+  //        _|_ /   )  //       |      \
+  //       '/,_ _ _/  ( ; -.    |    _ _\           .-~~~^-.
+  //       ,-{        _      `-.|.-~-.           .~         `.
+  //        '/\      /                 ~-. _ .-~      .-~^-.  \
+  //           `.   {            }                   /      \  \
+  //         .----~-.\        \-'                 .~   `      \  `. \^-_
+  //        ///.----..>    c   \             _ -~             `.  ^-`  ^-_
+  //          ///-._ _ _ _ _ _ _}^ - - - - ~                     ~--,___.-/
+  //
+  /////
+*/
+/* -------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/**
+  * @file
+  * CSS loading indicators.
+  * http://codepen.io/TaniaLD/pen/oKxep
+  * http://projects.lukehaas.me/css-loaders/
+  * https://github.com/jh3y/whirl/
+*/
+/* @import 'animations' */
+/**
+* @file 
+* Component style index.
+*
+* Comment out any components that will not be used,
+* for best performance/smallest file size.
+*/
+/*
+  DO NOT EDIT DIRECTLY
+  @see src/style-dictionary/variables/
+  Generated on Mon, 18 Jul 2022 07:16:40 GMT
+*/
+/**
+* @file
+* Add derivatives of style-dictionary variables .
+*/
+/* Variable aliases */
+/* Variable extensions */
+/* Header region */
+/** Define custom vars here, create/update style dictionary entries as needed **/
+/**
+* @file 
+* Styles index
+* 
+* Comment out any components that will not be used,
+* for best performance/smallest file size.
+*/
+/**
+  * @file src\sass\styles\_cellular-grid.scss
+  * Cellular Grid
+*/
+.cell {
+  width: 100%;
+}
+
+.container {
+  max-width: 72em;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  column-gap: 1em;
+  row-gap: 1em;
+  align-items: stretch;
+  justify-items: stretch;
+  grid-auto-flow: row;
+}
+.grid > * {
+  /* Setting the default value */
+  transition: all 400ms ease 0ms;
+}
+.grid.cols1 {
+  grid-template-columns: 1fr;
+}
+.grid.cols2 {
+  grid-template-columns: 1fr 1fr;
+}
+.grid.cols3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.grid.cols4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.grid.cols5 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.grid.rows1 {
+  grid-template-rows: 1fr;
+}
+.grid.rows2 {
+  grid-template-rows: 1fr 1fr;
+}
+.grid.rows3 {
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.grid.rows4 {
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.grid.rows5 {
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 500px) {
+  .grid.cols2, .grid.cols3, .grid.cols4, .grid.cols5 {
+    grid-template-columns: 1fr;
+  }
+  .grid.rows2, .grid.rows3, .grid.rows4, .grid.rows5 {
+    grid-template-rows: 1fr;
+  }
+}
+@media (min-width: 500px) and (max-width: 960px) {
+  .grid.cols3, .grid.cols4, .grid.cols5 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid.rows2, .grid.rows3, .grid.rows4, .grid.rows5 {
+    grid-template-rows: 1fr;
+  }
+}
+/**
+  * @file src\sass\styles\_cellular-positioning.scss
+  * Element positioning classes
+*/
+.hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+.clearfix {
+  clear: both;
+  zoom: 1;
+}
+.clearfix::after, .clearfix::before {
+  display: block;
+  clear: both;
+  width: 100%;
+  content: "";
+}
+
+.left,
+.right,
+.center {
+  display: block;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.center {
+  float: none;
+  clear: both;
+  zoom: 1;
+  margin: 0% auto;
+}
+.center::after, .center::before {
+  display: block;
+  clear: both;
+  width: 100%;
+  content: "";
+}
+
+.xxl {
+  font-size: 15rem;
+}
+
+.xl {
+  font-size: 3rem;
+}
+
+.big {
+  font-size: 1.4rem;
+}
+
+.small {
+  font-size: 0.7rem;
+}
+
+.tiny {
+  font-size: 0.5rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/**
+  * @file styles/_region-wrappers.scss
+  * Content region styles
+*/
+#page-wrap {
+  padding-top: 96px;
+}
+
+.container {
+  margin: auto;
+}
+.container.grid {
+  display: grid;
+}
+.container.flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+/**
+  * @file src\sass\styles\_region-header.scss
+  * Content region styles
+*/
+#header {
+  display: block;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 96px;
+  background: #fefefe;
+  box-shadow: 0 0 1em 0.1em #fefefe;
+  will-change: height;
+}
+
+#header-top {
+  z-index: 4;
+  /* Position contents left or right */
+  text-align: right;
+  color: #fefefe;
+  border-bottom: 1px solid #fefefe;
+  background: #101010;
+  /* Custom type for region */
+}
+#header-top div {
+  display: inline;
+}
+#header-top h2,
+#header-top h3,
+#header-top h4 {
+  display: inline;
+  color: #fefefe;
+  font-size: 1em;
+}
+
+#header-bottom {
+  color: #fefefe;
+  background-color: #fefefe;
+}
+
+/**
+  * @file src\sass\styles\_region-footer.scss
+  * Content region styles
+*/
+#footer {
+  z-index: 1;
+  margin: 5em 0 0;
+  color: #fefefe;
+  background: #abaaa6;
+}
+
+/**
+  * @file
+  * Content region styles
+*/
+article,
+#content,
+.content {
+  background: #fefefe;
+  z-index: 2;
+}
+
+/**
+* @file styles/_region-sidebar.scss
+*/
+aside {
+  z-index: 3;
+  background: #abaaa6;
+}
+
+/**
+  * @file src\sass\styles\__typography.scss
+  * Custom typography
+*/
+/**
+  * @file src\sass\styles\__logo.scss
+  * Logo link style
+*/
+/* Container for logo image & text */
+.logo {
+  z-index: 9;
+  float: left;
+}
+.logo a {
+  /* Logo + link to frontpage. */
+  display: block;
+  width: 96px;
+  height: 96px;
+  transition: all 300ms ease-in;
+  text-decoration: none;
+  text-indent: -999em;
+  border: none;
+  background-image: "../assets/images/logo.png";
+  background-image: "../assets/images/logo.svg";
+  background-position: 50% 50%;
+  background-size: 96px 96px;
+  box-shadow: 0 0 0 0 #fefefe;
+  will-change: width, height, box-shadow;
+}
+.logo a:focus, .logo a:hover {
+  box-shadow: 0 0 0.4em 0 #29b4de;
+}
+
+/**
+* @file
+* Component style index.
+*
+* Comment out any components that will not be used,
+* for best performance/smallest file size.
+*/
+/**
+  * @file
+  * Primary #main-menu styling
+*/
+/* Primary Navigation */
+#main-menu {
+  /* Setting the default value */
+  transition: all 400ms ease 0ms;
+  position: absolute;
+  top: 2em;
+  right: 0;
+  margin: 0 0 0 15%;
+  padding: 0;
+  /* Top level list */
+}
+#main-menu a, #main-menu a:visited {
+  /* Common link styling */
+  z-index: 2;
+  display: block;
+  margin: 0;
+  padding: 0.4em 0.8em;
+  text-align: left;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #abaaa6;
+  border: none;
+  border-radius: unset;
+  background: #fefefe;
+  box-shadow: #abaaa6 0 0.1em 0.25em;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+}
+#main-menu a:hover, #main-menu a:focus, #main-menu a:active, #main-menu a.active, #main-menu a:visited:hover, #main-menu a:visited:focus, #main-menu a:visited:active, #main-menu a:visited.active {
+  text-decoration: none;
+  color: #fefefe;
+  background: #29b4de;
+}
+#main-menu > li:first-child {
+  margin-left: 0;
+}
+#main-menu > li:last-child {
+  margin-right: 0;
+}
+#main-menu > li.parent::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 0.6em solid #abaaa6;
+  border-right: 0.4em solid transparent;
+  border-left: 0.4em solid transparent;
+  right: 0;
+  bottom: 0;
+}
+#main-menu > li.parent::after:hover {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 0.6em solid #29b4de;
+  border-right: 0.4em solid transparent;
+  border-left: 0.4em solid transparent;
+}
+#main-menu li {
+  display: block;
+  float: left;
+  width: auto;
+  max-width: none;
+  margin: 0 0.5em;
+  padding: 0;
+  list-style: none;
+  /* Nested menus. */
+  /* First lefel dropdown */
+}
+#main-menu li ul {
+  /* Setting the default value */
+  transition: all 400ms ease 0ms;
+  position: absolute;
+  z-index: 1;
+  top: 2.2em;
+  overflow: hidden;
+  max-height: 0;
+  margin: 0;
+  color: #abaaa6;
+  border: none;
+  background: #f1f1f1;
+  background: rgba(241, 241, 241, 0.9);
+  right: 0;
+  /* border-right: 1px solid; */
+  padding: 0 0.1em 0 0;
+  text-align: right;
+}
+#main-menu li ul.active {
+  overflow: visible;
+}
+#main-menu li.parent::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: "";
+  bottom: 0;
+}
+#main-menu li.parent::after:hover {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: "";
+}
+#main-menu li:focus > ul, #main-menu li:hover > ul, #main-menu li.active > ul {
+  /* Setting the default value */
+  transition: all 400ms ease 0ms;
+  max-height: 20em; /* May need to adjust up/down depending on # of nested items */
+}
+#main-menu li li {
+  float: none;
+  width: 100%;
+  margin: 0 0 0.1em;
+  padding: 0;
+  border: none;
+  /* Secondary++ menu fly-out */
+}
+#main-menu li li ul {
+  top: 0;
+  width: 0;
+  max-height: unset;
+  right: 100%;
+  left: initial;
+}
+#main-menu li li.active > ul, #main-menu li li:focus > ul, #main-menu li li:hover > ul {
+  width: 100%;
+}
+
+/**
+  * @file
+  * Breadcrumb navigation styling.
+*/
+#breadcrumb {
+  width: 90%;
+  height: 2em;
+  margin: 0 0 2em;
+  padding: 0.1em 5%;
+  background: #fefefe;
+}
+#breadcrumb li {
+  display: inline;
+  display: inline-block;
+  margin: 0 0 0 0.4em;
+  padding: 0 0 0 1.4em;
+  list-style: none;
+  color: white;
+  background-image: url(../assets/icons/min/png/arrow-right.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 1em;
+  line-height: 2em;
+}
+#breadcrumb li a {
+  color: #abaaa6;
+}
+#breadcrumb li.first {
+  background-image: none;
+}
+#breadcrumb li.first a {
+  padding: 0 0 0 2em;
+  background-image: url(../assets/icons/min/png/home.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 1.4em;
+}
+
+.calendar {
+  width: 100%;
+}
+
+.date-nav-wrapper {
+  padding: 0.6em 0;
+  background: #f1f1f1;
+}
+.date-nav-wrapper .date-nav {
+  padding: 0.4em 0;
+}
+.date-nav-wrapper .pager {
+  margin: 0.1em auto 0;
+  padding: 0.4em 0.4em 0;
+}
+.date-nav-wrapper .date-prev,
+.date-nav-wrapper .date-next {
+  position: relative;
+  padding: 0 2em;
+}
+.date-nav-wrapper .date-prev a,
+.date-nav-wrapper .date-next a {
+  /* 'flat' || 'bevel' */
+}
+.date-nav-wrapper .date-prev a,
+.date-nav-wrapper .date-next a {
+  width: auto;
+  margin: 0.25rem auto;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  text-align: center;
+  color: #29b4de;
+  border: #29b4de 2px solid;
+  background-color: #fefefe;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  font-weight: 500;
+  line-height: normal;
+  /* transform: translate3d(0,0,0); */
+  /* Setting the default value */
+  border-radius: 0.1em;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 0.1em 0.7rem;
+}
+.date-nav-wrapper .date-prev a:visited,
+.date-nav-wrapper .date-next a:visited {
+  color: #29b4de;
+  background-color: #fefefe;
+}
+.date-nav-wrapper .date-prev a.active, .date-nav-wrapper .date-prev a:active,
+.date-nav-wrapper .date-next a.active,
+.date-nav-wrapper .date-next a:active {
+  cursor: default;
+}
+.date-nav-wrapper .date-prev a.active, .date-nav-wrapper .date-prev a:active, .date-nav-wrapper .date-prev a:hover,
+.date-nav-wrapper .date-next a.active,
+.date-nav-wrapper .date-next a:active,
+.date-nav-wrapper .date-next a:hover {
+  text-decoration: none;
+  outline: none;
+  /* transform: translate3d(0,0.1em,1em); */
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 0.1em 0.4em;
+  border-color: #29b4de;
+}
+
+.month-view table {
+  width: 100%;
+  padding: 0.2em;
+  border-spacing: 0.1em;
+  border: #abaaa6 1px solid;
+  border-collapse: separate;
+}
+.month-view th {
+  color: #abaaa6;
+}
+.month-view tr {
+  background-color: transparent;
+}
+.month-view td {
+  padding: 0.2em;
+  background-color: #fefefe;
+}
+.month-view td.date-box {
+  margin: 0;
+  padding: 0;
+}
+
+.date-box .month.day {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  padding: 0 0.5em;
+  color: #fefefe;
+  background-color: #abaaa6;
+}
+.date-box a,
+.date-box a:visited {
+  color: #fefefe;
+}
+.date-box a:active, .date-box a:hover, .date-box a:focus, .date-box a:visited {
+  color: #bbe7f4;
+}
+
+.single-day td {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  width: 14%; /* ~ 100% / 7 days */
+  vertical-align: top;
+  border-right: #abaaa6 1px solid;
+  border-bottom: #abaaa6 1px solid;
+  border-left: #abaaa6 1px solid;
+  /* min-width: 5em; */
+  background-color: #fefefe;
+}
+.single-day td.today {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: #29b4de;
+  border-color: #29b4de;
+}
+.single-day td.past {
+  background-color: #e5e5e5;
+}
+.single-day td.past a, .single-day td.past a:visited {
+  color: #abaaa6;
+}
+.single-day a, .single-day a:visited {
+  display: block;
+  padding: 0.25rem;
+  border: #abaaa6 1px solid;
+  border-radius: 0.25rem;
+  background: #f1f1f1;
+}
+.single-day a:active, .single-day a:hover, .single-day a:focus, .single-day a:visited {
+  border-color: #29b4de;
+  background: #fefefe;
+}
+.single-day .date-display-single {
+  color: #abaaa6;
+}
+
+/**
+* Inspiration drwan from https://codepen.io/dyarfi/pen/QWbbmaG
+*/
+.card {
+  transition: 0.5s ease;
+  transform: perspective(3em) rotateX(0deg) rotateY(-1.175deg) rotateZ(-1deg);
+  border: 1px solid #fefefe;
+  border-radius: 0;
+  background: #abaaa6;
+}
+.card-header {
+  border-radius: 0;
+}
+.card-footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.card-header, .card-footer {
+  transition: 0.5s ease;
+}
+.card:hover {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: inset 0 0 0.3em 0 #abaaa6 inset 0 0 0.3em 0 #abaaa6 0.25rem 1px #101010;
+  transform: perspective(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  border-color: #eecc22;
+}
+.card:hover .card-header,
+.card:hover .card-footer {
+  color: #b69a0e;
+  border-color: #eecc22;
+  background-color: #fbf2c8;
+}
+.card:hover .promotion-promo {
+  transform: scale(1.175) translateY(2.5px);
+  transform-origin: left center;
+}
+.card:hover .promotion-price {
+  transform: translate(2.5px, 17.5px) scale(1.15);
+  transform-origin: center right;
+}
+.card-body {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.card .btn {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.card h2,
+.card h3 {
+  color: #fefefe;
+  background-color: #101010;
+}
+.card h2.big,
+.card h3.big {
+  margin: 0;
+  padding: 0.15rem 0;
+  transition: color 0.5s ease-in, border-color 0.5s ease-in-out;
+  text-transform: uppercase;
+  color: red;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.card h2.square,
+.card h3.square {
+  margin: 0.5rem auto 1rem;
+  padding: 1rem;
+  border: 10px solid red;
+}
+.card h2:hover,
+.card h3:hover {
+  color: #f90;
+  border-color: #f90;
+}
+.card p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/*
+// Box Shadow Placeholer and Class
+// -- Placeholder -- box shadow default
+%box-shadow {
+  box-shadow: 0 0 18px -3px rgba(143, 143, 143, 0.5);
+}
+%box-shadow-hover {
+  box-shadow: 0 0 20px -3px rgba(143, 143, 143, 0.75);
+}
+// -- Placeholder -- box shadow dark
+%box-shadow-dark {
+  box-shadow: 3px 3px 11px -3px rgba(0, 0, 0, 0.25);
+}
+%box-shadow-dark-hover {
+  box-shadow: 3px 3px 11px -3px rgba(0, 0, 0, 0.75);
+} */
+.promotion-promo {
+  transition: 0.25s linear;
+  text-decoration: line-through;
+  color: #ec2;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.promotion-price {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  width: 92px;
+  height: 92px;
+  padding-top: 1.25rem;
+  padding-bottom: 0;
+  transition: 0.25s linear;
+  transform: translate(5px, 27.5px) rotate(-9deg);
+  text-align: center;
+  color: #fefefe;
+  border: 1px dashed #fefefe;
+  border-radius: 5rem;
+  background: #ec2;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.promotion-price-desc {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.promotion-price-text {
+  margin: 0 auto;
+  padding: 0;
+  font-weight: 900;
+}
+
+.card-animate {
+  counter-reset: section;
+}
+.card-animate .card-body::before {
+  position: absolute;
+  z-index: 0;
+  bottom: 5rem;
+  left: -0.85rem;
+  display: block;
+  margin: 0;
+  padding: 0;
+  content: "" counter(section) "";
+  counter-increment: section;
+  transition: 0.5s ease;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 15rem;
+  font-weight: 900;
+  line-height: 0;
+}
+
+#comments {
+  /* Wraps entire Comments area. */
+}
+#comments h2 {
+  margin: 0.4em 0;
+  padding: 1em;
+  color: #fefefe;
+  background: #29b4de;
+}
+#comments h2::after {
+  position: absolute;
+  bottom: -0.4em;
+  left: 0;
+  width: 0;
+  height: 0;
+  content: " ";
+  border-top: 0.6em solid #29b4de;
+  border-right: 0.6em solid transparent;
+  border-left: 0.6em solid transparent;
+}
+
+/* Page anchors. */
+a[id^=comment-] {
+  position: absolute;
+  left: -999em;
+  visibility: hidden;
+}
+
+/* Comment reply threads. */
+.indented {
+  margin-bottom: 0.1em;
+  padding: 0 0 0 1em;
+}
+.indented .comment {
+  background-color: #e5e5e5;
+}
+
+/* Wraps individual comments. */
+.comment {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: inset 0 0 0.3em 0 #abaaa6 inset 0 0 0.3em 0 #abaaa6 0.25rem 1px #101010;
+  width: 90%;
+  margin: 0.1em auto 0.4em;
+  text-align: left;
+  border: 1px #abaaa6 solid;
+  background-color: #f6f6f6;
+}
+.comment.new {
+  border-color: #8c0d00;
+}
+.comment .post-info {
+  background-color: #e5e5e5;
+}
+.comment .links.inline {
+  display: block;
+  margin: 0.4em -1em -1em;
+  background-color: #cbcbcb;
+  font-size: 0.8em;
+}
+
+.comment-date,
+.comment-author {
+  display: block;
+  font-size: 0.7rem;
+  /* text-align: center; */
+}
+
+.comment-title {
+  margin: 0;
+  color: #fefefe;
+  background-color: #fefefe;
+  font-size: 1.4rem;
+}
+.comment-title::after {
+  content: "... ";
+}
+
+.comment-content {
+  padding: 1em;
+}
+
+.date-clear {
+  text-indent: 1em;
+}
+.date-clear > label {
+  text-indent: 1em;
+}
+
+label.date-clear,
+input.date-clear,
+textarea.date-clear,
+select.date-clear {
+  text-indent: unset;
+}
+
+.date-no-float {
+  clear: both;
+  zoom: 1;
+  display: block;
+}
+.date-no-float::after, .date-no-float::before {
+  display: block;
+  clear: both;
+  width: 100%;
+  content: "";
+}
+
+.date-float {
+  float: left;
+  clear: none;
+  width: auto;
+}
+
+.container-inline {
+  text-indent: 1em;
+}
+.container-inline div,
+.container-inline input {
+  display: inline;
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+label + input {
+  clear: both;
+  zoom: 1;
+}
+label + input::after, label + input::before {
+  display: block;
+  clear: both;
+  width: 100%;
+  content: "";
+}
+
+.filter-wrapper {
+  overflow: hidden;
+  height: 6em;
+}
+.filter-wrapper.active {
+  height: auto;
+}
+
+/**
+  * @file
+  * General styling for icons.
+*/
+/* Set true' or 'false' to include or exclude entire icon group. */
+.icon {
+  display: inline;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  padding: 0 0 0 1.1rem;
+  vertical-align: middle;
+  background-color: none;
+  background-repeat: no-repeat;
+  background-position: left center;
+  line-height: 1rem;
+}
+.icon:hover {
+  border-color: #29b4de;
+}
+.icon.search {
+  text-indent: 0;
+}
+
+.icon.arrow-up {
+  background-image: url("../assets/icons/png/arrow-up.png");
+  background-image: url("../assets/icons/svg/arrow-up.svg");
+}
+
+.icon.arrow-right {
+  background-image: url("../assets/icons/png/arrow-right.png");
+  background-image: url("../assets/icons/svg/arrow-right.svg");
+}
+
+.icon.arrow-down {
+  background-image: url("../assets/icons/png/arrow-down.png");
+  background-image: url("../assets/icons/svg/arrow-down.svg");
+}
+
+.icon.arrow-left {
+  background-image: url("../assets/icons/png/arrow-left.png");
+  background-image: url("../assets/icons/svg/arrow-left.svg");
+}
+
+.icon.mail {
+  background-image: url("../assets/icons/png/mail.png");
+  background-image: url("../assets/icons/svg/mail.svg");
+}
+
+.icon.menu {
+  background-image: url("../assets/icons/png/menu.png");
+  background-image: url("../assets/icons/svg/menu.svg");
+}
+
+.icon.message-error {
+  background-image: url("../assets/icons/png/message-error.png");
+  background-image: url("../assets/icons/svg/message-error.svg");
+}
+
+.icon.message-ok {
+  background-image: url("../assets/icons/png/message-ok.png");
+  background-image: url("../assets/icons/svg/message-ok.svg");
+}
+
+.icon.message-warning {
+  background-image: url("../assets/icons/png/message-warning.png");
+  background-image: url("../assets/icons/svg/message-warning.svg");
+}
+
+.icon.email {
+  background-image: url("../assets/icons/png/email.png");
+  background-image: url("../assets/icons/svg/email.svg");
+}
+
+.icon.home {
+  background-image: url("../assets/icons/png/home.png");
+  background-image: url("../assets/icons/svg/home.svg");
+}
+
+.icon.search {
+  background-image: url("../assets/icons/png/search.png");
+  background-image: url("../assets/icons/svg/search.svg");
+}
+
+.icon.facebook {
+  background-image: url("../assets/icons/png/facebook.png");
+  background-image: url("../assets/icons/svg/facebook.svg");
+}
+
+.icon.instagram {
+  background-image: url("../assets/icons/png/instagram.png");
+  background-image: url("../assets/icons/svg/instagram.svg");
+}
+
+.icon.twitter {
+  background-image: url("../assets/icons/png/twitter.png");
+  background-image: url("../assets/icons/svg/twitter.svg");
+}
+
+.icon.twitter-t {
+  background-image: url("../assets/icons/png/twitter-t.png");
+  background-image: url("../assets/icons/svg/twitter-t.svg");
+}
+
+.icon.github-octo {
+  background-image: url("../assets/icons/png/github-octo.png");
+  background-image: url("../assets/icons/svg/github-octo.svg");
+}
+
+.icon.google {
+  background-image: url("../assets/icons/png/google.png");
+  background-image: url("../assets/icons/svg/google.svg");
+}
+
+.icon.youtube {
+  background-image: url("../assets/icons/png/youtube.png");
+  background-image: url("../assets/icons/svg/youtube.svg");
+}
+
+.icon.linkedin {
+  background-image: url("../assets/icons/png/linkedin.png");
+  background-image: url("../assets/icons/svg/linkedin.svg");
+}
+
+.icon.reddit {
+  background-image: url("../assets/icons/png/reddit.png");
+  background-image: url("../assets/icons/svg/reddit.svg");
+}
+
+/**
+  * @file
+  * Pager styling
+*/
+.pager {
+  display: table;
+  clear: both;
+  margin: 0.4em auto;
+  padding: 0;
+  text-align: center;
+  font: bold 0.8em/1em;
+}
+.pager li {
+  float: left;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  outline: 0;
+}
+.pager a {
+  /* 'flat' || 'bevel' */
+}
+.pager a {
+  width: auto;
+  margin: 0.25rem auto;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  text-align: center;
+  color: #abaaa6;
+  border: #abaaa6 2px solid;
+  background-color: #abaaa6;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  font-weight: 500;
+  line-height: normal;
+  /* transform: translate3d(0,0,0); */
+  /* Setting the default value */
+  border-radius: 0.1em;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 0.1em 0.7rem;
+}
+.pager a:visited {
+  color: #abaaa6;
+  background-color: #abaaa6;
+}
+.pager a.active, .pager a:active {
+  cursor: default;
+}
+.pager a.active, .pager a:active, .pager a:hover {
+  text-decoration: none;
+  outline: none;
+  /* transform: translate3d(0,0.1em,1em); */
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 0.1em 0.4em;
+  border-color: #29b4de;
+}
+.pager a:hover, .pager a:focus {
+  color: #fefefe;
+  background: #101010;
+}
+.pager .pager-item {
+  margin: 0.2em;
+}
+.pager .pager-current {
+  margin: -0.5em 0.6em 0;
+  padding: 1rem;
+  cursor: default;
+  color: #fefefe;
+  border: 1px solid #fefefe;
+  outline: 0;
+  background: #fefefe;
+  font-weight: bold;
+}
+
+.pager-first,
+.pager-previous,
+.pager-next,
+.pager-last {
+  margin: 0.2em;
+  border: none;
+}
+.pager-first a,
+.pager-previous a,
+.pager-next a,
+.pager-last a {
+  width: 4em;
+}
+
+/**
+  * @file
+  *
+  * Styling for author and date information.
+*/
+.post-info {
+  float: left;
+  margin: 0 1rem 1rem 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Used for comments & article posts. */
+.post-date {
+  display: block;
+  float: left;
+  margin: 1em 1em 1em 0;
+  text-align: center;
+  color: #fefefe;
+  border: #fefefe 1px solid;
+  background: white;
+  /* Setting the default value */
+  border-radius: 0.2em;
+}
+.post-date .day,
+.post-date .month,
+.post-date .year {
+  display: block;
+}
+.post-date .day {
+  float: left;
+  padding: 0.2em 0 0.2em 0.6em;
+}
+.post-date .month {
+  float: left;
+  padding: 0.2em 0.6em 0.2em 0.4em;
+}
+.post-date .year {
+  clear: both;
+  padding: 0.2em 0.8em;
+  color: #fefefe;
+  border-top: #101010 1px solid;
+  background-color: #abaaa6;
+}
+
+.post-author {
+  font-size: 0.8em;
+}
+.post-author a {
+  display: block;
+}
+
+/**
+  * @file
+  * Styling DOM classes provided by drupal
+*/
+form.site-search {
+  display: inline;
+  display: inline-block;
+  width: auto;
+  padding: 0.2em;
+  text-align: right;
+  border: #abaaa6 1px solid;
+  border-radius: 0.2em;
+  background-color: #fefefe;
+  background-color: rgba(254, 254, 254, 0.6);
+  font-size: 0.8em;
+}
+form.site-search .container-inline {
+  text-indent: unset;
+}
+form.site-search input {
+  display: inline;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border-radius: 0.2em;
+  line-height: 2em;
+}
+form.site-search input[type=text] {
+  width: 12em;
+  padding: 0.5em 0.2em 0.3em;
+  color: #abaaa6;
+  border-bottom: #abaaa6 0.1em solid;
+  border-radius: 0.2em;
+  background: rgba(254, 254, 254, 0.4);
+  line-height: 1em;
+}
+form.site-search input[type=text]:hover, form.site-search input[type=text]:active, form.site-search input[type=text]:focus {
+  color: #101010;
+  border-color: #29b4de;
+  outline: none;
+}
+form.site-search input[type=submit] {
+  float: none;
+  padding: 0 1.4em 0 0.2em;
+  border: #abaaa6 1px solid;
+  background: #fefefe url("../assets/icons/png/search.png") center right no-repeat;
+  background-image: url("../assets/icons/svg/search.svg");
+  background-size: 1.4em;
+}
+form.site-search input[type=submit]:hover, form.site-search input[type=submit]:active, form.site-search input[type=submit]:focus {
+  border-color: #29b4de;
+  outline: none;
+  background-color: #eaeaea;
+}
+
+form.search-form {
+  display: block;
+  margin: 3em auto;
+  padding: 1em;
+}
+form.search-form label {
+  margin: 0;
+  padding: 0;
+}
+
+.search-result .title {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.search-snippet-info {
+  font-size: 0.8em;
+}
+
+.tabs {
+  clear: both;
+  zoom: 1;
+  margin: 2em 0 1em;
+  border-bottom: #abaaa6 1px solid;
+}
+.tabs::after, .tabs::before {
+  display: block;
+  clear: both;
+  width: 100%;
+  content: "";
+}
+.tabs li {
+  display: block;
+  float: left;
+  margin: 0 0.1em;
+  list-style: none;
+}
+.tabs a, .tabs a:visited {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  display: block;
+  padding: 0.4em 0.8em 0.2em;
+  color: #fefefe;
+  border: 1px solid;
+  border-bottom: none;
+  background-color: #fefefe;
+}
+.tabs a.active, .tabs a:active, .tabs a:focus, .tabs a:hover {
+  position: relative;
+  top: 1px;
+  text-decoration: underline;
+  color: #29b4de;
+  border-bottom: #e5e5e5 1px solid;
+  background-color: #f4f4f4;
+}
+.tabs a.active {
+  border-bottom-color: #fefefe;
+  background-color: #fefefe;
+}
+.tabs.secondary {
+  margin: -1em 0 0;
+  padding: 1em;
+  border-bottom: 1px solid;
+  background-color: transparent;
+}
+.tabs.secondary a, .tabs.secondary a:visited {
+  border-radius: 0.25rem;
+  padding: 0.4em 0.8em;
+  color: #fefefe;
+  border: 1px solid;
+  background-color: #fefefe;
+}
+.tabs.secondary a.active, .tabs.secondary a:active, .tabs.secondary a:focus, .tabs.secondary a:hover {
+  color: #29b4de;
+  background-color: #fefefe;
+}
+
+/**
+  * @file
+  * Styling DOM id's provided by drupal
+*/
+.user-links {
+  float: right;
+  padding: 0.2em;
+  font-size: 0.9em;
+}
+.user-links a,
+.user-links a:visited {
+  margin: 0 0.2em;
+  padding: 0.4em;
+  text-decoration: none;
+  color: #fefefe;
+}
+.user-links a:active,
+.user-links a:hover,
+.user-links a:focus {
+  text-decoration: none;
+  color: #fefefe;
+}
+
+/**
+* @file src\sass\components\cellular-ui\___index.scss
+* Cellular-ui index.
+* 
+* Comment out any components that will not be used,
+* for best performance/smallest file size.
+*/
+/**
+  * @file src\sass\components\cellular-ui
+  * CellularUI
+  * Set default UI styles common to all components.
+*/
+/* Variables specific to UI */
+/* Styling common to all Cellular UI components */
+/* Only applies styling if javascript is enabled/DOM ready. */
+.jAccordion,
+.jBlocklink,
+.jMmenu,
+.jTabs {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  animation: fadein 1200ms;
+  /* Set appearance of active UI elements */
+}
+.jAccordion li,
+.jBlocklink li,
+.jMmenu li,
+.jTabs li {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0;
+}
+.jAccordion .title,
+.jBlocklink .title,
+.jMmenu .title,
+.jTabs .title {
+  /* Setting the default value */
+  transition: all 400ms ease 0ms;
+  z-index: 2;
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.6em 1em;
+  cursor: pointer;
+  color: #fefefe;
+  background-color: #fefefe;
+}
+.jAccordion .title:focus, .jAccordion .title:hover,
+.jBlocklink .title:focus,
+.jBlocklink .title:hover,
+.jMmenu .title:focus,
+.jMmenu .title:hover,
+.jTabs .title:focus,
+.jTabs .title:hover {
+  color: #fefefe;
+  background-color: #1c94b8;
+}
+.jAccordion .title a, .jAccordion .title a:visited,
+.jBlocklink .title a,
+.jBlocklink .title a:visited,
+.jMmenu .title a,
+.jMmenu .title a:visited,
+.jTabs .title a,
+.jTabs .title a:visited {
+  text-decoration: none;
+  color: #fefefe;
+  border: none;
+  font-weight: bold;
+  line-height: 1.4em;
+}
+.jAccordion .title a.active, .jAccordion .title a:active, .jAccordion .title a:focus, .jAccordion .title a:hover, .jAccordion .title a:visited.active, .jAccordion .title a:visited:active, .jAccordion .title a:visited:focus, .jAccordion .title a:visited:hover,
+.jBlocklink .title a.active,
+.jBlocklink .title a:active,
+.jBlocklink .title a:focus,
+.jBlocklink .title a:hover,
+.jBlocklink .title a:visited.active,
+.jBlocklink .title a:visited:active,
+.jBlocklink .title a:visited:focus,
+.jBlocklink .title a:visited:hover,
+.jMmenu .title a.active,
+.jMmenu .title a:active,
+.jMmenu .title a:focus,
+.jMmenu .title a:hover,
+.jMmenu .title a:visited.active,
+.jMmenu .title a:visited:active,
+.jMmenu .title a:visited:focus,
+.jMmenu .title a:visited:hover,
+.jTabs .title a.active,
+.jTabs .title a:active,
+.jTabs .title a:focus,
+.jTabs .title a:hover,
+.jTabs .title a:visited.active,
+.jTabs .title a:visited:active,
+.jTabs .title a:visited:focus,
+.jTabs .title a:visited:hover {
+  text-decoration: none;
+  border: none;
+}
+.jAccordion .panel,
+.jBlocklink .panel,
+.jMmenu .panel,
+.jTabs .panel {
+  z-index: 1;
+  /* Area content is displayed in accordions & tabs. */
+  display: block;
+  padding-top: 1em;
+  text-align: center;
+  color: #fefefe;
+  border: #abaaa6 1px solid;
+  background: #fefefe;
+}
+.jAccordion .panel p,
+.jAccordion .panel li,
+.jBlocklink .panel p,
+.jBlocklink .panel li,
+.jMmenu .panel p,
+.jMmenu .panel li,
+.jTabs .panel p,
+.jTabs .panel li {
+  text-align: left;
+}
+.jAccordion .panel-content,
+.jBlocklink .panel-content,
+.jMmenu .panel-content,
+.jTabs .panel-content {
+  animation: fadein 400ms;
+}
+.jAccordion .active .title,
+.jBlocklink .active .title,
+.jMmenu .active .title,
+.jTabs .active .title {
+  background-color: #1c94b8;
+}
+
+/**
+  * @file
+  * CellularUI : jAccordion
+*/
+.jAccordion li {
+  margin: 0 auto 1px;
+}
+.jAccordion .title {
+  /* Setting the default value */
+  transition: "background-color", 0.4s;
+  /* padding-left: 2em; */
+  /* background-size: 1em; */
+  /* background-repeat: no-repeat; */
+  /* background-position: left center; */
+  /* background-image: url(../assets/icons/svg/plus.svg); */
+  border: 1px solid #fefefe;
+  border-bottom: none;
+}
+.jAccordion .panel {
+  /* border-top: .4em solid; */
+}
+.jAccordion .active .title {
+  /* background-size: 1em; */
+  /* background-image: url(../assets/icons/svg/minus.svg); */
+}
+
+/**
+  * @file
+  * CellularUI : jMMenu
+*/
+@media (max-width: 500px) {
+  #main-menu ul.menu {
+    /* Hides navigation prior to js loading & acting on DOM to prevent */
+    /* jankiness caused by js acting on the DOM. */
+    visibility: hidden;
+  }
+}
+.cellular {
+  /* Styling for actual menu */
+  /* Styles applied after js loads */
+  /* Outside of media query since the size may change (i.e. reorient tablet) but */
+  /* the interface should be consistent- cellularui.js doesn't listen for resize */
+  /* events, and the menu needs to be available at all screen sizes. */
+  /* Styling common to top navigation. */
+  /* &.push-down, */
+  /* Styling common to side navigation. */
+  /* Position left menus. */
+  /* Position right menus. */
+  /* Styles applied to page elements. */
+}
+.cellular .jMmenu-trigger {
+  /* Setting the default value */
+  border-radius: 0.5rem;
+  /* Setting the default value */
+  transition: all 400ms ease 0ms;
+  z-index: 10;
+  top: 1em !important;
+  /* Wrqpper element, used as the menu trigger. */
+  float: right;
+  width: 3em;
+  height: 3em;
+  padding: 0;
+  cursor: pointer;
+  border: 2px solid #101010;
+  background-color: #fefefe;
+  background-image: url("../assets/icons/png/menu.png");
+  background-image: url("../assets/icons/svg/menu.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 9em;
+  box-shadow: 0 0 0 0 #fefefe;
+  will-change: background-position, box-shadow;
+}
+.cellular .jMmenu-trigger:focus, .cellular .jMmenu-trigger:hover {
+  box-shadow: 0 0 0.2em 0.1em #29b4de;
+}
+.cellular .jMmenu-trigger.active {
+  /* Shift background to indicate state. */
+  background-position: right center;
+}
+.cellular .jMmenu-trigger.active:focus, .cellular .jMmenu-trigger.active:hover {
+  box-shadow: 0 0 0.2em 0.1em #8c0d00;
+}
+.cellular .jMmenu-triggertext {
+  position: absolute;
+  right: 0;
+  bottom: -1.4em;
+  left: 0;
+  text-align: center;
+  color: #abaaa6;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  font-size: 0.8em;
+  line-height: 1em;
+}
+.cellular .jMmenu-menu {
+  /* Setting the default value */
+  transition: all 400ms ease 0ms;
+  /* Styling for menu & links. */
+  position: fixed;
+  z-index: 999;
+  top: 96px;
+  /* opacity: 0; */
+  overflow: hidden;
+  margin: 0;
+  transform: translate3d(0, 0, 0);
+  background-color: rgba(254, 254, 254, 0.7);
+}
+.cellular .jMmenu-menu li {
+  display: block;
+  max-width: none;
+  margin: auto;
+  list-style: none;
+}
+.cellular .jMmenu-menu li.parent a {
+  cursor: pointer;
+}
+.cellular .jMmenu-menu li.parent::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 0.6em solid #fefefe;
+  border-right: 0.4em solid transparent;
+  border-left: 0.4em solid transparent;
+  /* Setting the default value */
+  transition: all 400ms ease 0ms;
+  top: 1em;
+  right: 0.2em;
+}
+.cellular .jMmenu-menu li.parent.active::after, .cellular .jMmenu-menu li.parent:focus::after, .cellular .jMmenu-menu li.parent:hover::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 0.6em solid #29b4de;
+  border-right: 0.4em solid transparent;
+  border-left: 0.4em solid transparent;
+  transform: rotateY(180deg);
+}
+.cellular .jMmenu-menu .child {
+  z-index: 1;
+  border-left: #abaaa6 1px solid;
+}
+.cellular .jMmenu-menu .child li {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.25s;
+  border: #fefefe 1px solid;
+  border-radius: 0.8em;
+}
+.cellular .jMmenu-menu .child.active > li {
+  max-height: 32em;
+  transition: max-height 0.5s ease-in;
+}
+.cellular .jMmenu-menu a, .cellular .jMmenu-menu a:visited {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: inset 0 0 0.3em 0 #abaaa6 inset 0 0 0.3em 0 #abaaa6 0.25rem 1px #101010;
+  display: block;
+  height: 1em;
+  padding: 0.6em 1em 0.8em;
+  text-decoration: none;
+  color: #fefefe;
+  border-bottom: 1px solid;
+  background-color: #fefefe;
+  background-image: none;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.cellular .jMmenu-menu a:active, .cellular .jMmenu-menu a:focus, .cellular .jMmenu-menu a:hover {
+  color: #29b4de;
+  background-color: #fefefe;
+}
+.cellular .jMmenu-menu .active > a {
+  color: #29b4de;
+  background-color: #fefefe;
+}
+.cellular .jMmenu-menu ul {
+  /* Styling for nested menus. */
+  margin: 0 0 0 0.8em;
+}
+.cellular.slide-down .jMmenu-menu {
+  right: 0;
+  bottom: 96px;
+  left: 0;
+  width: 100%;
+  height: 0;
+}
+.cellular.slide-down .jMmenu-menu.active {
+  bottom: 0;
+  height: 100%;
+}
+.cellular.push-left .jMmenu-menu, .cellular.push-right .jMmenu-menu, .cellular.slide-left .jMmenu-menu, .cellular.slide-right .jMmenu-menu {
+  bottom: 0;
+  width: 0;
+  max-width: 0;
+}
+.cellular.push-left .jMmenu-menu.active, .cellular.push-right .jMmenu-menu.active, .cellular.slide-left .jMmenu-menu.active, .cellular.slide-right .jMmenu-menu.active {
+  width: 100%;
+  max-width: 50%;
+}
+.cellular.push-left .jMmenu-menu, .cellular.slide-left .jMmenu-menu {
+  left: 0;
+}
+.cellular.push-right .jMmenu-menu, .cellular.slide-right .jMmenu-menu {
+  right: 0;
+}
+.cellular.jMmenu-active.push-left, .cellular.jMmenu-active.push-right {
+  /* Push #page-wrap over to keep content visible when .jMmenu is active. */
+}
+.cellular.jMmenu-active.push-left #content, .cellular.jMmenu-active.push-right #content {
+  width: 50%;
+}
+.cellular.jMmenu-active.push-down #content {
+  width: 50%;
+}
+
+/**
+  * @file
+  * CellularUI : window scrolled styling
+*/
+.scrolled #header {
+  height: 48px;
+  /* overflow: hidden; */
+  transition: all 300ms ease;
+}
+.scrolled #header .logo {
+  padding: 0;
+}
+.scrolled #header .logo a {
+  width: 48px; /* You may need to weak width to fit your image. */
+  height: 48px;
+  /* transform: scale(0.5, 0.5); */
+  transition: all 500ms ease-out;
+  background-size: 48px 48px;
+}
+.scrolled #main-menu {
+  top: 0;
+}
+.scrolled .jMmenu-trigger {
+  /* Element, used as the menu trigger. */
+  top: 4.8px !important;
+  width: 38.4px;
+  height: 38.4px;
+  border: 1px solid #fefefe;
+  background-size: 115.2px;
+}
+.scrolled.jMmenu-active .jMmenu-menu, .scrolled.jMmenu-inactive .jMmenu-menu {
+  top: 48px;
+}
+
+/**
+  * @file
+  * CellularUI : jScrolli
+*/
+.jScrolli {
+  /* Setting the default value */
+  transition: all 400ms ease 0ms;
+  height: 240px;
+  opacity: 0;
+}
+
+/* Fade in after js applies structure */
+.cellular.jScrolli {
+  opacity: 1;
+}
+
+.jScrolli-wrap {
+  overflow: hidden;
+  border: 1px solid #fefefe;
+  background-color: #fefefe;
+  /* Styles applied while .slide is transitioning */
+}
+.jScrolli-wrap ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.jScrolli-wrap li {
+  /* display: inline; */
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.jScrolli-wrap.active .jScrolli-control {
+  opacity: 1;
+}
+.jScrolli-wrap.transition .jScrolli-caption p {
+  opacity: 0;
+}
+
+.jScrolli-slide {
+  transition: all 0.6s linear;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  left: 100%;
+  width: 100%;
+  opacity: 0;
+  /* Slide content */
+}
+.jScrolli-slide.previous {
+  right: -100%;
+  left: -100%;
+}
+.jScrolli-slide.next {
+  right: 100%;
+  left: 100%;
+}
+.jScrolli-slide.active {
+  right: 0;
+  left: 0;
+  opacity: 1;
+}
+.jScrolli-slide.active .jScrolli-slide-content {
+  opacity: 1;
+}
+.jScrolli-slide .jScrolli-slide-content {
+  transition: all 1s linear;
+  z-index: 1;
+  text-align: center;
+  opacity: 0;
+}
+.jScrolli-slide .title a,
+.jScrolli-slide .title a:visited {
+  text-shadow: -2px 0 #fefefe, 0px 0 #fefefe, -1px 1px 0 #fefefe, 1px 1px 0 #fefefe;
+  color: #fefefe;
+  font-weight: bold;
+}
+.jScrolli-slide .title a:active,
+.jScrolli-slide .title a:hover,
+.jScrolli-slide .title a:focus {
+  text-shadow: -4px 0 #29b4de, 0px 0 #29b4de, -2px 2px 0 #29b4de, 2px 2px 0 #29b4de;
+  color: #fefefe;
+}
+.jScrolli-slide p {
+  padding: 0.8em;
+  background: rgba(254, 254, 254, 0.9);
+}
+
+.jScrolli-background {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% auto;
+}
+
+.jScrolli-caption {
+  /* max-height: 0; */
+  transition: all 1s linear;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 1em;
+  left: 0;
+  padding: 0 2em;
+  background-color: #101010;
+  background-color: rgba(16, 16, 16, 0.8);
+}
+.jScrolli-caption p {
+  transition: all 1s linear;
+  max-width: none;
+  margin: 0;
+  padding: 0.8em;
+  opacity: 1;
+  color: #fefefe;
+}
+
+.jScrolli-control {
+  /* Setting the default value */
+  transition: all 400ms ease 0ms;
+  position: absolute;
+  z-index: 3;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  text-indent: -999em;
+  opacity: 0.2;
+  color: #fefefe;
+  /* background-size: $controlsize; */
+  background-color: #abaaa6;
+  background-image: url(../assets/icons/png/controls.png);
+  background-image: url(../assets/icons/svg/controls.svg);
+  background-repeat: no-repeat;
+}
+.jScrolli-control.prev, .jScrolli-control.next {
+  top: 50%;
+  background-color: #fefefe;
+}
+.jScrolli-control.prev:hover, .jScrolli-control.prev:focus, .jScrolli-control.next:hover, .jScrolli-control.next:focus {
+  background-color: #29b4de;
+}
+.jScrolli-control.prev {
+  left: 0;
+  background-position: -24px 8px;
+}
+.jScrolli-control.next {
+  right: 0;
+  background-position: -88px 8px;
+}
+.jScrolli-control.play, .jScrolli-control.pause {
+  top: 0;
+  left: 0;
+  transition: none;
+  opacity: 0;
+  border: #fefefe 2px solid;
+  border-radius: 50%;
+  background-color: #101010;
+}
+.jScrolli-control.play {
+  background-position: 8px 8px;
+}
+.jScrolli-control.pause {
+  background-position: -54px 8px;
+}
+
+.jScrolli-markers {
+  position: relative;
+  z-index: 1;
+  left: 50%;
+  float: left;
+  /*
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 0.75em; // jScrolli-wrap padding-bottom - .marker height /2
+  */
+}
+.jScrolli-markers li {
+  position: relative;
+  left: -50%;
+  float: left;
+  margin: 0.25em 0.5em;
+}
+
+.jScrolli-marker {
+  /* Setting the default value */
+  transition: all 400ms ease 0ms;
+  width: 0.5em;
+  height: 0.5em;
+  /* display: block; */
+  /* float: left; */
+  cursor: pointer;
+  text-indent: -999em;
+  border: #fefefe 1px solid;
+  border-radius: 50%;
+  background-color: #abaaa6;
+}
+.jScrolli-marker.active {
+  border-color: #16708b;
+  background-color: #29b4de;
+  box-shadow: 0 0 0.5em 0 #29b4de;
+}
+.jScrolli-marker:hover, .jScrolli-marker:focus {
+  border-color: #29b4de;
+}
+.jScrolli-marker a {
+  text-indent: -999em;
+}
+
+/**
+  * @file
+  * CellularUI : jTabs
+*/
+.jTabs-wrap {
+  display: block;
+  clear: both;
+  width: 90%;
+  margin: auto;
+  padding: 0;
+  /* Vertical Tab Styling */
+}
+.jTabs-wrap .panel {
+  z-index: 1;
+  bottom: 1px;
+  clear: both;
+  padding: 1.4em 1em 1em;
+  color: #fefefe;
+  border: 1px solid #fefefe;
+  background: #fefefe;
+}
+.jTabs-wrap > ul {
+  margin: 0;
+  padding: 0;
+}
+.jTabs-wrap .tab {
+  z-index: 2;
+  float: left;
+  margin: 0 0 0 0.1em;
+}
+.jTabs-wrap .tab:first-child {
+  margin-left: 0;
+}
+.jTabs-wrap .tab .title {
+  padding: 0.4em 0.6em;
+  border: 1px solid #fefefe;
+}
+.jTabs-wrap .tab.active {
+  color: #fefefe;
+  background-color: #fefefe;
+}
+.jTabs-wrap .tab.active .title {
+  color: #fefefe;
+  border-bottom-color: #fefefe;
+  background: #fefefe;
+}
+.jTabs-wrap .tab.active .title a {
+  color: #fefefe;
+}
+.jTabs-wrap.vertical > ul {
+  float: left;
+  width: 25%;
+  /* margin: 0; */
+}
+.jTabs-wrap.vertical .panel {
+  right: 1px;
+  bottom: 0;
+  display: inline;
+  display: inline-block;
+  clear: none;
+}
+.jTabs-wrap.vertical .tab {
+  display: block;
+  float: none;
+  margin: 0.1em 0;
+}
+.jTabs-wrap.vertical .tab:first-child {
+  margin-top: 0;
+}
+.jTabs-wrap.vertical .tab .title {
+  padding: 0.4em 1%;
+}
+.jTabs-wrap.vertical .tab .title a {
+  padding: 0 1em;
+}
+.jTabs-wrap.vertical .tab.active {
+  /* border-color: $panel_background; */
+}
+.jTabs-wrap.vertical .tab.active .title {
+  border-right-color: #fefefe;
+  border-bottom-color: #fefefe;
+}
+
+/* Under Development
+@import "jCard";
+@import "jModal";
+@import "jScrollindicator";
+@import "jSocial";
+@import "jTooltip";
+@import "jZoom";
+*/
+/**
+* @file src\sass\pages\___index.scss
+* Page style index.
+* Styling for specific page types
+*
+* Comment out any components that will not be used,
+* for best performance/smallest file size.
+*/
+/**
+  * @file
+  * Page or category specific styling
+  * Cellular adds <body> classes based on the content URL,
+  * splitting at each '/'
+  * i.e. mysite.com/content/audio/mytrack.html
+  * <body class="content audio">
+*/
+/**
+* @file 
+* Breakpoints index.
+* 
+* Comment out any components that will not be used,
+* for best performance/smallest file size.
+*/
+/**
+  * @file breakpoints/_default.scss
+  * Default breakpoint tweaks.
+*/
+/**
+* @file
+* Small/mobile media breakpoint tweaks.
+*/
+@media (max-width: 500px) {
+  /* /// */
+  /* //// */
+}
+/**
+* @file breakpoints/_narrow.scss
+* Narrow/tablet media breakpoint tweaks.
+*/
+/**
+* @file breakpoints/_large.scss
+* Large/tv media breakpoint tweaks.
+*/
+/**
+* @file breakpoints/_retina.scss
+* Retina display breakpoint tweaks.
+*/
+/**
+* @file Custom styles
+*/
+/***
+* SASS Configuration Variables
+***/
+/* Import variables as defined in style-dictionary and mixins/libraries (i.e. bourbon, etc.) */
+/**
+* @file 
+* Mixins index.
+* 
+* Comment out any components that will not be used,
+* for best performance/smallest file size.
+*/
+/**
+  * @file
+  // Cellular SASS mixins
+  //    tread with caution
+  //                      ^    ^
+  //                     / \  //\
+  //       |\___/|      /   \//  \
+  //       /O  O  \__  /    //  | \
+  //      /     /  \/_/    //   |  \
+  //      @___@'    \/_   //    |   \
+  //         |       \/_ //     |    \
+  //         |        \///      |     \
+  //        _|_ /   )  //       |      \
+  //       '/,_ _ _/  ( ; -.    |    _ _\           .-~~~^-.
+  //       ,-{        _      `-.|.-~-.           .~         `.
+  //        '/\      /                 ~-. _ .-~      .-~^-.  \
+  //           `.   {            }                   /      \  \
+  //         .----~-.\        \-'                 .~   `      \  `. \^-_
+  //        ///.----..>    c   \             _ -~             `.  ^-`  ^-_
+  //          ///-._ _ _ _ _ _ _}^ - - - - ~                     ~--,___.-/
+  //
+  /////
+*/
+/* -------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/**
+  * @file
+  * CSS loading indicators.
+  * http://codepen.io/TaniaLD/pen/oKxep
+  * http://projects.lukehaas.me/css-loaders/
+  * https://github.com/jh3y/whirl/
+*/
+/* @import 'animations' */
+/**
+* @file 
+* Component style index.
+*
+* Comment out any components that will not be used,
+* for best performance/smallest file size.
+*/
+/*
+  DO NOT EDIT DIRECTLY
+  @see src/style-dictionary/variables/
+  Generated on Mon, 18 Jul 2022 07:16:40 GMT
+*/
+/**
+* @file
+* Add derivatives of style-dictionary variables .
+*/
+/* Variable aliases */
+/* Variable extensions */
+/* Header region */
+/** Define custom vars here, create/update style dictionary entries as needed **/
+@keyframes circle2Square {
+  0% {
+    border-radius: 50%;
+    width: 7em;
+    height: 7em;
+  }
+  30% {
+    border-radius: 0%;
+    width: 7em;
+    height: 7em;
+  }
+  100% {
+    border-radius: 50%;
+  }
+}
+@keyframes square2circle {
+  0% {
+    border-radius: 50%;
+    width: 7em;
+    height: 7em;
+  }
+  30% {
+    border-radius: 0%;
+    width: 7em;
+    height: 7em;
+  }
+  100% {
+    border-radius: 50%;
+  }
+}
+a {
+  color: #29b4de;
+  background-repeat: no-repeat;
+  /* Setting the default value */
+  transition: all 400ms ease 0ms;
+}
+a:visited {
+  color: #97dbef;
+}
+a:hover, a:focus {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: inset 0 0 0.3em 0 #abaaa6 inset 0 0 0.3em 0 #abaaa6 0.25rem 1px #101010;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section.grid {
+  column-gap: 1em;
+  row-gap: 1em;
+  grid-template-rows: 0fr 1fr 2.4em;
+  grid-template-columns: 1fr;
+}
+section h3 {
+  font-size: 1.4rem;
+  padding: 1em 0.4em 0.4em 1em;
+}
+section p {
+  padding: 0 1.4em;
+}
+
+#header {
+  background: #101010;
+  box-shadow: 0 0 1em 0.1em #abaaa6;
+  transition: all 500ms ease;
+}
+#header h1 {
+  z-index: 4;
+  font-size: 3.4em;
+  margin: 0.85em 0 0 0.85em;
+  padding: 0;
+  text-align: left;
+  color: #29b4de;
+  transition: all 300ms ease 100ms;
+}
+#header h3 {
+  z-index: 3;
+  font-size: 2.25em;
+  margin: -0.4em 0 0 1.2em;
+  padding: 0;
+  text-decoration: overline;
+  color: #97dbef;
+  transition: all 300ms ease 200ms;
+}
+
+#header-bottom a.github, #header-bottom a.github:visited {
+  padding: 1.6em 1em 1em 10%;
+  background-color: #fefefe;
+  color: #505050;
+  background-position: left 6% bottom 1em;
+}
+#header-bottom a.github:hover, #header-bottom a.github:active, #header-bottom a.github:focus {
+  background-color: #fefefe;
+  color: black;
+  background-position: left 6.3% bottom 1em;
+}
+
+#content-wrap {
+  background-color: #fffbf0;
+}
+
+#content {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+#contact {
+  z-index: 5;
+  position: absolute;
+  top: 2em;
+  right: 5%;
+  width: 7em;
+  height: 7em;
+  line-height: 7em;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+  border: #101010 1px solid;
+  border-radius: 50%;
+  background-color: #fefefe;
+  box-shadow: 0 0 1px 1px #97dbef;
+  transition: all 500ms ease 200ms;
+}
+
+a.jCard {
+  border: #bebebe;
+  box-shadow: 0.25rem 0.25rem 0.25rem 0 #0f4d5f;
+}
+a.jCard:hover, a.jCard:active, a.jCard:focus {
+  border-color: #abaaa6;
+  box-shadow: 0.5rem 0.5rem 0.75em 0 black;
+}
+
+a.github, a.github:visited {
+  font-weight: bold;
+  background-color: #97dbef;
+  color: #fefefe;
+  display: block;
+  padding: 0.5em 1em 0.7em 4em;
+  backface-visibility: hidden;
+  background-position: left 1em center;
+  background-image: url(../assets/icons/png/github-octo.png);
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEAElEQVRYhe1XW0vrWBQu/q6ZOTM/QF+8to4iihesKOdRUIKoqNOKF8Q74rONSYmS4MsZT2O9vyiCaKCiDzYinGOrVuOla/g2k5K2iSdTfRrOggXt7t7f+vba61aP56e4FI7jigRB+FNV1Yimad/j8bjx8PBA0MvLSwNrqqp+FUXR9+GGFUUZ0XXdIIvc3d3RxcUFU3y2CsgpihLE2XcZ53n+j7OzM4b++vpK0WiUgsEgVVVVUXFxcZZ6vV4aHh5me7AXEovFbnme/60g46urq+3JZJIh7ezsUGtra55RJ8VenIEkEol0OBz+/F+Nf35+fqaXlxeanp6msrIyqq+vd00A2tLSQrOzswwDWJIktbsyLknSJ9wcB3t6ehhYTU0N3d7e0uDgoCvj4+PjLDhLSkoYBrDgiVAo9PubxjmOKzLfHDc3AUHAlPX1dVpcXHTU7e3tzF4QwHl44t+YSL4ZmLIsj5pvbr1RbW0tFSImAeju7i5bUxQl4Hh7XdcNRHBuwC0vLxdEYG5uLoPh9/tZdqBm2BIQRZH5GWlkNV5XV8fesBBJpVJUXl6ewdrc3GTrgiB48whEo9EIfkSeWwkgt98j3d3deViqqq7nEdA07Tt+REGxEoAb3yPWC/l8PrZ2enr6LY+ArusGSmpuSpkRXKgEAoEsvPv7e1aq8wikUqk06nouAeT+e6SzszMLDzZgy5bA+fl5ZmN1dTW1tbWxGxQqT09P1NHRQZWVlRlc2LAloOu6cXNzQ6OjoyibrBacnJygeODNCiJwdXXFMFADgDkyMkKwYfsEmqZ9S6fTNDMzgzShgYEBamhoyIqFx8dHV4bxzijHKESNjY3sGYEJDNiwDUJVVb/i8NDQUMZoaWkpayrmd7iyv7+fJiYmaGVlJdN2IchxrPf19VFFRYVtjzDjSVXVL3aFyGdXiDiOo4ODAxYP1uKUTCazbg0yXV1dbzYps08IglBhW4rj8Tgrxc3NzVkH8RzobmNjY8ytCwsLrDpCr6+vGahhGMwLTsabmprMUvzocRJFUYJ2zQgK9wIARGDs8PCQjo6OaH5+nhEJhUJ0fHzsSGBvb48RlWV5yJEAx3FFGKOwEQZzQRBQcPPGxgbekd0YaYrnQPt2IjA5OcmMx2KxxA/nRFEUfzUHEgScHSAi2i2B3t5ecyB5XVpa+uRxI5IktWOMgk5NTTkS2NraepMAbm4ZyfyujJuiKIofrM2YsM4IPyKAgNvf32duB0Y4HHY3D+YKRmqMUQBCAYHL0d3W1tbyCKCAofIh1SxjeUIQhF88H/DHJIBJxpr3yAZ0T13XGTmoKUg1WZb/8ny0CILgxTCBUgpCaCpQfMZaJBL5m+f5yg837Pk/yz+zJtd4OxTw8wAAAABJRU5ErkJggg==);
+}
+a.github:visited {
+  background-color: #6bcbe8;
+}
+a.github:active, a.github:hover, a.github:focus {
+  background-color: #29b4de;
+  color: #fefefe;
+}
+
+@media (min-width: 500px) and (max-width: 960px) {
+  #header {
+    height: 3.5em;
+    box-shadow: 0 0 0.5em 0.1em #101010;
+  }
+  #header h1 {
+    font-size: 1.5em;
+    margin: 0.5em 0 0 7%;
+  }
+  #header h3 {
+    font-size: 1em;
+    margin: 0 0 0 7%;
+  }
+  #contact {
+    top: 0;
+    right: 7%;
+    height: 3.15em;
+    line-height: 3.15em;
+    display: block;
+  }
+}
+.scrolled #header {
+  height: 3.5em;
+  box-shadow: 0 0 0.5em 0.1em #101010;
+}
+.scrolled #header h1 {
+  font-size: 1.5em;
+  margin: 0.5em 0 0 7%;
+}
+.scrolled #header h3 {
+  font-size: 1em;
+  margin: 0 0 0 7%;
+}
+.scrolled #contact {
+  top: 0;
+  right: 7%;
+  height: 3.15em;
+  line-height: 3.15em;
+  display: block;
+}
