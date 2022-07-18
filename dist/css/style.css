@@ -90,13 +90,11 @@
 .container {
   max-width: 72em;
   margin: auto;
-  margin: auto;
 }
 
 .grid {
   display: grid;
-  -moz-column-gap: 1em;
-       column-gap: 1em;
+  column-gap: 1em;
   row-gap: 1em;
   align-items: stretch;
   justify-items: stretch;
@@ -135,6 +133,23 @@
 }
 .grid.rows5 {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 500px) {
+  .grid.cols2, .grid.cols3, .grid.cols4, .grid.cols5 {
+    grid-template-columns: 1fr;
+  }
+  .grid.rows2, .grid.rows3, .grid.rows4, .grid.rows5 {
+    grid-template-rows: 1fr;
+  }
+}
+@media (min-width: 500px) and (max-width: 960px) {
+  .grid.cols3, .grid.cols4, .grid.cols5 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid.rows2, .grid.rows3, .grid.rows4, .grid.rows5 {
+    grid-template-rows: 1fr;
+  }
 }
 /**
   * @file src\sass\styles\_cellular-positioning.scss
@@ -222,6 +237,10 @@
 #page-wrap {
   padding-top: 96px;
 }
+
+.container {
+  margin: auto;
+}
 .container.grid {
   display: grid;
 }
@@ -247,9 +266,6 @@
   background: #fefefe;
   box-shadow: 0 0 1em 0.1em #fefefe;
   will-change: height;
-  background: #101010;
-  box-shadow: 0 0 1em 0.1em #abaaa6;
-  transition: all 500ms ease;
 }
 
 #header-top {
@@ -541,6 +557,9 @@ aside {
 .date-nav-wrapper .date-prev a,
 .date-nav-wrapper .date-next a {
   /* 'flat' || 'bevel' */
+}
+.date-nav-wrapper .date-prev a,
+.date-nav-wrapper .date-next a {
   width: auto;
   margin: 0.25rem auto;
   padding: 0.7rem 1rem;
@@ -556,7 +575,7 @@ aside {
   /* Setting the default value */
   border-radius: 0.1em;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 0 0.1em 0.7rem
+  box-shadow: 0 0.1em 0.7rem;
 }
 .date-nav-wrapper .date-prev a:visited,
 .date-nav-wrapper .date-next a:visited {
@@ -980,8 +999,6 @@ label + input::after, label + input::before {
 }
 .icon.search {
   text-indent: 0;
-  background-image: url("../assets/icons/png/search.png");
-  background-image: url("../assets/icons/svg/search.svg");
 }
 
 .icon.arrow-up {
@@ -1037,6 +1054,11 @@ label + input::after, label + input::before {
 .icon.home {
   background-image: url("../assets/icons/png/home.png");
   background-image: url("../assets/icons/svg/home.svg");
+}
+
+.icon.search {
+  background-image: url("../assets/icons/png/search.png");
+  background-image: url("../assets/icons/svg/search.svg");
 }
 
 .icon.facebook {
@@ -1105,6 +1127,8 @@ label + input::after, label + input::before {
 }
 .pager a {
   /* 'flat' || 'bevel' */
+}
+.pager a {
   width: auto;
   margin: 0.25rem auto;
   padding: 0.7rem 1rem;
@@ -1120,7 +1144,7 @@ label + input::after, label + input::before {
   /* Setting the default value */
   border-radius: 0.1em;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 0 0.1em 0.7rem
+  box-shadow: 0 0.1em 0.7rem;
 }
 .pager a:visited {
   color: #abaaa6;
@@ -1401,8 +1425,7 @@ form.search-form label {
   margin: 0 auto;
   padding: 0;
   list-style: none;
-  -webkit-animation: fadein 1200ms;
-          animation: fadein 1200ms;
+  animation: fadein 1200ms;
   /* Set appearance of active UI elements */
 }
 .jAccordion li,
@@ -1506,8 +1529,7 @@ form.search-form label {
 .jBlocklink .panel-content,
 .jMmenu .panel-content,
 .jTabs .panel-content {
-  -webkit-animation: fadein 400ms;
-          animation: fadein 400ms;
+  animation: fadein 400ms;
 }
 .jAccordion .active .title,
 .jBlocklink .active .title,
@@ -1546,6 +1568,13 @@ form.search-form label {
   * @file
   * CellularUI : jMMenu
 */
+@media (max-width: 500px) {
+  #main-menu ul.menu {
+    /* Hides navigation prior to js loading & acting on DOM to prevent */
+    /* jankiness caused by js acting on the DOM. */
+    visibility: hidden;
+  }
+}
 .cellular {
   /* Styling for actual menu */
   /* Styles applied after js loads */
@@ -1734,8 +1763,6 @@ form.search-form label {
   height: 48px;
   /* overflow: hidden; */
   transition: all 300ms ease;
-  height: 3.5em;
-  box-shadow: 0 0 0.5em 0.1em #101010;
 }
 .scrolled #header .logo {
   padding: 0;
@@ -2096,6 +2123,10 @@ form.search-form label {
 * @file
 * Small/mobile media breakpoint tweaks.
 */
+@media (max-width: 500px) {
+  /* /// */
+  /* //// */
+}
 /**
 * @file breakpoints/_narrow.scss
 * Narrow/tablet media breakpoint tweaks.
@@ -2178,37 +2209,7 @@ form.search-form label {
 /* Variable extensions */
 /* Header region */
 /** Define custom vars here, create/update style dictionary entries as needed **/
-@-webkit-keyframes circle2Square {
-  0% {
-    border-radius: 50%;
-    width: 7em;
-    height: 7em;
-  }
-  30% {
-    border-radius: 0%;
-    width: 7em;
-    height: 7em;
-  }
-  100% {
-    border-radius: 50%;
-  }
-}
 @keyframes circle2Square {
-  0% {
-    border-radius: 50%;
-    width: 7em;
-    height: 7em;
-  }
-  30% {
-    border-radius: 0%;
-    width: 7em;
-    height: 7em;
-  }
-  100% {
-    border-radius: 50%;
-  }
-}
-@-webkit-keyframes square2circle {
   0% {
     border-radius: 50%;
     width: 7em;
@@ -2261,8 +2262,7 @@ h3 {
 }
 
 section.grid {
-  -moz-column-gap: 1em;
-       column-gap: 1em;
+  column-gap: 1em;
   row-gap: 1em;
   grid-template-rows: 0fr 1fr 2.4em;
   grid-template-columns: 1fr;
@@ -2273,6 +2273,12 @@ section h3 {
 }
 section p {
   padding: 0 1.4em;
+}
+
+#header {
+  background: #101010;
+  box-shadow: 0 0 1em 0.1em #abaaa6;
+  transition: all 500ms ease;
 }
 #header h1 {
   z-index: 4;
@@ -2293,8 +2299,12 @@ section p {
   transition: all 300ms ease 200ms;
 }
 
+#header-bottom {
+  background-color: #fefefe;
+}
+
 #content-wrap {
-  background-color: #fffbf0;
+  padding-top: 96px;
 }
 
 #content {
@@ -2303,6 +2313,7 @@ section p {
 }
 
 #contact {
+  font-size: 1em;
   z-index: 5;
   position: absolute;
   top: 2em;
@@ -2320,16 +2331,16 @@ section p {
   transition: all 500ms ease 200ms;
 }
 
-#footer a.github, #footer a.github:visited {
+#footer .github, #footer .github:visited {
   padding: 1.6em 1em 2.4em 10%;
   background-color: #fefefe;
   color: #505050;
   background-position: left 6% bottom 1em;
 }
-#footer a.github:hover, #footer a.github:active, #footer a.github:focus {
+#footer .github:hover, #footer .github:active, #footer .github:focus {
   background-color: #fefefe;
   color: black;
-  background-position: left 6.3% bottom 1em;
+  background-position: left 6% bottom 1.2em;
 }
 
 a.jCard {
@@ -2341,62 +2352,26 @@ a.jCard:hover, a.jCard:active, a.jCard:focus {
   box-shadow: 0.5rem 0.5rem 0.75em 0 black;
 }
 
-a.github, a.github:visited {
+.github, .github:visited {
   font-weight: bold;
   background-color: #97dbef;
   color: #fefefe;
   display: block;
   padding: 0.5em 1em 0.7em 4em;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   background-position: left 1em center;
   background-image: url(../assets/icons/png/github-octo.png);
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEAElEQVRYhe1XW0vrWBQu/q6ZOTM/QF+8to4iihesKOdRUIKoqNOKF8Q74rONSYmS4MsZT2O9vyiCaKCiDzYinGOrVuOla/g2k5K2iSdTfRrOggXt7t7f+vba61aP56e4FI7jigRB+FNV1Yimad/j8bjx8PBA0MvLSwNrqqp+FUXR9+GGFUUZ0XXdIIvc3d3RxcUFU3y2CsgpihLE2XcZ53n+j7OzM4b++vpK0WiUgsEgVVVVUXFxcZZ6vV4aHh5me7AXEovFbnme/60g46urq+3JZJIh7ezsUGtra55RJ8VenIEkEol0OBz+/F+Nf35+fqaXlxeanp6msrIyqq+vd00A2tLSQrOzswwDWJIktbsyLknSJ9wcB3t6ehhYTU0N3d7e0uDgoCvj4+PjLDhLSkoYBrDgiVAo9PubxjmOKzLfHDc3AUHAlPX1dVpcXHTU7e3tzF4QwHl44t+YSL4ZmLIsj5pvbr1RbW0tFSImAeju7i5bUxQl4Hh7XdcNRHBuwC0vLxdEYG5uLoPh9/tZdqBm2BIQRZH5GWlkNV5XV8fesBBJpVJUXl6ewdrc3GTrgiB48whEo9EIfkSeWwkgt98j3d3deViqqq7nEdA07Tt+REGxEoAb3yPWC/l8PrZ2enr6LY+ArusGSmpuSpkRXKgEAoEsvPv7e1aq8wikUqk06nouAeT+e6SzszMLDzZgy5bA+fl5ZmN1dTW1tbWxGxQqT09P1NHRQZWVlRlc2LAloOu6cXNzQ6OjoyibrBacnJygeODNCiJwdXXFMFADgDkyMkKwYfsEmqZ9S6fTNDMzgzShgYEBamhoyIqFx8dHV4bxzijHKESNjY3sGYEJDNiwDUJVVb/i8NDQUMZoaWkpayrmd7iyv7+fJiYmaGVlJdN2IchxrPf19VFFRYVtjzDjSVXVL3aFyGdXiDiOo4ODAxYP1uKUTCazbg0yXV1dbzYps08IglBhW4rj8Tgrxc3NzVkH8RzobmNjY8ytCwsLrDpCr6+vGahhGMwLTsabmprMUvzocRJFUYJ2zQgK9wIARGDs8PCQjo6OaH5+nhEJhUJ0fHzsSGBvb48RlWV5yJEAx3FFGKOwEQZzQRBQcPPGxgbekd0YaYrnQPt2IjA5OcmMx2KxxA/nRFEUfzUHEgScHSAi2i2B3t5ecyB5XVpa+uRxI5IktWOMgk5NTTkS2NraepMAbm4ZyfyujJuiKIofrM2YsM4IPyKAgNvf32duB0Y4HHY3D+YKRmqMUQBCAYHL0d3W1tbyCKCAofIh1SxjeUIQhF88H/DHJIBJxpr3yAZ0T13XGTmoKUg1WZb/8ny0CILgxTCBUgpCaCpQfMZaJBL5m+f5yg837Pk/yz+zJtd4OxTw8wAAAABJRU5ErkJggg==);
 }
-a.github:visited {
+.github:visited {
   background-color: #6bcbe8;
 }
-a.github:active, a.github:hover, a.github:focus {
+.github:active, .github:hover, .github:focus {
   background-color: #29b4de;
   color: #fefefe;
 }
-.scrolled #header h1 {
-  font-size: 1.5em;
-  margin: 0.5em 0 0 7%;
-}
-.scrolled #header h3 {
-  font-size: 1em;
-  margin: 0 0 0 7%;
-}
-.scrolled #contact {
-  top: 0;
-  right: 7%;
-  height: 3.15em;
-  line-height: 3.15em;
-  display: block;
-}
-@media (max-width: 500px) {
-  .grid.cols2, .grid.cols3, .grid.cols4, .grid.cols5 {
-    grid-template-columns: 1fr;
-  }
-  .grid.rows2, .grid.rows3, .grid.rows4, .grid.rows5 {
-    grid-template-rows: 1fr;
-  }
-  #main-menu ul.menu {
-    /* Hides navigation prior to js loading & acting on DOM to prevent */
-    /* jankiness caused by js acting on the DOM. */
-    visibility: hidden;
-  }
-  /* /// */
-  /* //// */
-}
+
 @media (min-width: 500px) and (max-width: 960px) {
-  .grid.cols3, .grid.cols4, .grid.cols5 {
-    grid-template-columns: 1fr 1fr;
-  }
-  .grid.rows2, .grid.rows3, .grid.rows4, .grid.rows5 {
-    grid-template-rows: 1fr;
-  }
   #header {
     height: 3.5em;
     box-shadow: 0 0 0.5em 0.1em #101010;
@@ -2412,8 +2387,29 @@ a.github:active, a.github:hover, a.github:focus {
   #contact {
     top: 0;
     right: 7%;
-    height: 3.15em;
-    line-height: 3.15em;
-    display: block;
+    font-size: 0.8em;
   }
+  #contact:hover, #contact:focus, #contact:active {
+    font-size: 1em;
+  }
+}
+.scrolled #header {
+  height: 3.5em;
+  box-shadow: 0 0 0.5em 0.1em #101010;
+}
+.scrolled #header h1 {
+  font-size: 1.5em;
+  margin: 0.5em 0 0 7%;
+}
+.scrolled #header h3 {
+  font-size: 1em;
+  margin: 0 0 0 7%;
+}
+.scrolled #contact {
+  top: 0;
+  right: 7%;
+  font-size: 0.8em;
+}
+.scrolled #contact:hover, .scrolled #contact:focus, .scrolled #contact:active {
+  font-size: 1em;
 }

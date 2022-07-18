@@ -23,11 +23,13 @@ $bwidth2: calc($bwidth / 2);
   #contact {
     top: 0;
     right: 7%;
-    //width: calc($bwidth2 * 0.9);
-    height: calc($bwidth2 * 0.9);
-    line-height: calc($bwidth2 * 0.9);
-    display: block;
-    //border-radius: 0;
+    font-size: 0.8em;
+
+    &:hover,
+    &:focus,
+    &:active {
+      font-size: 1em;
+    }
   }
 }
 
@@ -125,16 +127,22 @@ section {
     transition: all 300ms ease 200ms;
   }
 }
+#header-bottom {
+  background-color: $light;
+
+}
 
 #content-wrap {
-  background-color: $swatch-cream;
+  padding-top: $header_height;
 }
+
 #content {
   max-width: 80%;
   margin: 0 auto;
 }
 
 #contact {
+  font-size: 1em;
   z-index: 5;
   position: absolute;
   top: 2em;
@@ -153,21 +161,21 @@ section {
 }
 
 #footer {
-  a.github {
+  .github {
     &,
     &:visited {
       padding: 1.6em 1em 2.4em 10%;
       background-color: $light;
       color: $grey-light;
       background-position: left 6% bottom 1em;
-      
+
     }
     &:hover,
     &:active,
     &:focus {
       background-color: $light;
       color: $grey-dark;
-      background-position: left 6.3% bottom 1em;
+      background-position: left 6% bottom 1.2em;      
     }
   }
 }
@@ -182,7 +190,7 @@ a.jCard {
     box-shadow: $size-tiny $size-tiny 0.75em 0 $shadow;
   }
 }
-a.github {
+.github {
   &,
   &:visited {
     font-weight: bold;
