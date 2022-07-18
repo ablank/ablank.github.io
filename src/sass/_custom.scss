@@ -126,25 +126,6 @@ section {
   }
 }
 
-#header-bottom {
-  a.github {
-    &,
-    &:visited {
-      padding: 1.6em 1em 1em 10%;
-      background-color: $light;
-      color: $grey-light;
-      background-position: left 6% bottom 1em;
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: $light;
-      color: $grey-dark;
-      background-position: left 6.3% bottom 1em;
-    }
-  }
-}
-
 #content-wrap {
   background-color: $swatch-cream;
 }
@@ -169,6 +150,26 @@ section {
   background-color: $swatch-white;
   box-shadow: 0 0 1px 1px $hilight-dark;
   transition: all 500ms ease 200ms;
+}
+
+#footer {
+  a.github {
+    &,
+    &:visited {
+      padding: 1.6em 1em 2.4em 10%;
+      background-color: $light;
+      color: $grey-light;
+      background-position: left 6% bottom 1em;
+      
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $light;
+      color: $grey-dark;
+      background-position: left 6.3% bottom 1em;
+    }
+  }
 }
 
 a.jCard {
