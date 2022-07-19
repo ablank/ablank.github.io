@@ -3,7 +3,7 @@
  */
 
 cellular.jIndicate = function (opts) {
-  let fn = {};
+  var fn = {};
   var o = jQuery.extend(
     {
       cclass: "jIndicate",
@@ -17,14 +17,14 @@ cellular.jIndicate = function (opts) {
    * Init jIndicate
    */
   fn.init = function ($obj) {
-    let indicator = jQuery(`<div class="${o.cclass}-indicator"/>`);
+    var indicator = jQuery(`<div class="${o.cclass}-indicator"/>`);
     var ref = $obj.find(o.el);
     var events = [];
 
     $obj.append(indicator);
 
     ref.on(events, function (e) {
-      let active = jQuery(this);
+      var active = jQuery(this);
       active.activate();
       indicator.css({
         left: active.css("left"),

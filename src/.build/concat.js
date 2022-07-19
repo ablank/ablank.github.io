@@ -11,17 +11,15 @@ const makeDir = (dir) => {
   }
 };
 makeDir(distdir);
-  let files = glob('**/*.min.js', '', (data)=>{
-    console.log(data)
-  }
+let files = glob('**/*.min.js', '', (data) => {
+  console.log(data);
+});
 
-  );
-
-  concat(files)
+concat(files)
   .then((data) => write(path.resolve('..', 'src', 'js', distFile), data))
   .catch((e) => {
     console.error(e);
-  })
+  });
 //let ffiles = glob('**/*');
 const read = (fName) => {
   new Promise((res, rej) => {
