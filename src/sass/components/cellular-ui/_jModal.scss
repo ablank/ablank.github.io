@@ -49,7 +49,7 @@
   padding: 1em;
   border: $color-neutral 1px solid;
   border-radius: 50%;
-  background: $dark-bg;
+  background: $light-dark;
 
   &.active {
     border-radius: $size-nano;
@@ -57,7 +57,7 @@
     .jModal-close {
       width: 1em;
       height: 1em;
-      border: 0.1em solid $dark-bg;
+      border: 0.1em solid $light-dark;
       background: $color-error;
     }
   }

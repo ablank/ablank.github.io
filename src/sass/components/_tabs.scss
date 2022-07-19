@@ -32,13 +32,13 @@
       top: 1px;
       text-decoration: underline;
       color: $hilight;
-      border-bottom: darken($dark-bg, 10%) 1px solid;
-      background-color: darken($dark-bg, 4%);
+      border-bottom: darken($light-dark, 10%) 1px solid;
+      background-color: darken($light-dark, 4%);
     }
 
     &.active {
-      border-bottom-color: $dark-bg;
-      background-color: $dark-bg;
+      border-bottom-color: $light-dark;
+      background-color: $light-dark;
     }
   }
 
@@ -54,7 +54,7 @@
         @include round($size-nano);
 
         padding: 0.4em 0.8em;
-        color: $dark-bg;
+        color: $light-dark;
         border: 1px solid;
         background-color: $light;
       }
@@ -64,7 +64,7 @@
       &:focus,
       &:hover {
         color: $hilight;
-        background-color: $dark-bg;
+        background-color: $light-dark;
       }
     }
   }

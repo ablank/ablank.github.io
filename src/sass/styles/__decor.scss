@@ -19,7 +19,7 @@
   /* max-width: 720px; // constrain width to prevent pseudo elements from showing outside of box */
   margin: 0 auto;
   padding: 3em 1.4em;
-  background-color: $dark-bg;
+  background-color: $light-dark;
 
   &::before,
   &::after {
@@ -47,11 +47,11 @@
 .ribbon {
   @include ribbon(1.2em, 1em, $dark);
 
-  color: $dark-bg;
+  color: $light-dark;
 }
 
 .popout {
   @include popout(1.2em, 1em, $dark);
 
-  color: $dark-bg;
+  color: $light-dark;
 }

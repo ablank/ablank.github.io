@@ -14,7 +14,7 @@ $btn_size: 2em; /*  */
   height: $btn_size;
   cursor: cell;
   vertical-align: middle;
-  color: $dark-bg;
+  color: $light-dark;
   border: 1px solid $color-neutral;
   border-radius: 50%;
   background-color: $light;
@@ -31,7 +31,7 @@ $btn_size: 2em; /*  */
   margin: 0;
   padding: 0;
   opacity: 0;
-  color: $dark-bg;
+  color: $light-dark;
   border-radius: $size-nano;
   border-top-left-radius: 0;
   background-color: rgba($dark, 0.9);

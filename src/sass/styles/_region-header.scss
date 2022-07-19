@@ -10,7 +10,7 @@
   top: 0;
   left: 0;
   height: $header-height;
-  background: $dark-bg;
+  background: $light-dark;
   box-shadow: 0 0 1em 0.1em $light;
   will-change: height;
 }
@@ -20,7 +20,7 @@
 
   /* Position contents left or right */
   text-align: right;
-  color: $dark-bg;
+  color: $light-dark;
   border-bottom: $default-border;
   background: $dark;
 
@@ -33,12 +33,12 @@
   h3,
   h4 {
     display: inline;
-    color: $dark-bg;
+    color: $light-dark;
     font-size: 1em;
   }
 }
 
 #header-bottom {
-  color: $dark-bg;
+  color: $light-dark;
   background-color: $light;
 }

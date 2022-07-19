@@ -45,7 +45,7 @@
 
   td {
     padding: 0.2em;
-    background-color: $dark-bg;
+    background-color: $light-dark;
 
     &.date-box {
       margin: 0;
@@ -59,13 +59,13 @@
     @include round($size-nano, "top");
 
     padding: 0 0.5em;
-    color: $dark-bg;
+    color: $light-dark;
     background-color: $color-neutral;
   }
 
   a,
   a:visited {
-    color: $dark-bg;
+    color: $light-dark;
   }
 
   a {
@@ -89,7 +89,7 @@
     border-left: $color-neutral 1px solid;
 
     /* min-width: 5em; */
-    background-color: $dark-bg;
+    background-color: $light-dark;
 
     &.today {
       @include box-shadow($hilight);
@@ -98,7 +98,7 @@
     }
 
     &.past {
-      background-color: darken($dark-bg, 10%);
+      background-color: darken($light-dark, 10%);
 
       a {
         &,
@@ -116,7 +116,7 @@
       padding: $size-nano;
       border: $color-neutral 1px solid;
       border-radius: $size-nano;
-      background: darken($dark-bg, 5%);
+      background: darken($light-dark, 5%);
     }
 
     &:active,
@@ -124,7 +124,7 @@
     &:focus,
     &:visited {
       border-color: $hilight;
-      background: $dark-bg;
+      background: $light-dark;
     }
   }
 

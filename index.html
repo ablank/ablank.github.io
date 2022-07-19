@@ -51,14 +51,14 @@
         </section>
 
         <section class="jCard grid">
-          <h3><a href="http://ablank.github.io/projects/imediaelement">iMediaElement Drupal 7 Module</a></h3>
+          <h3><a href="http://ablank.github.io/imediaelement">iMediaElement Drupal 7 Module</a></h3>
           <p>Improved mediaelement.js module for easily embedding video from multiple stream
             providers.</p>
           <a href="http://github.com/ablank/imediaelement.module" class="github">Git this project</a>
         </section>
 
         <section class="jCard grid">
-          <h3><a href="http://ablank.github.io/projects/phi/">Phi Calc</a></h3>
+          <h3><a href="http://ablank.github.io/phi.html">Phi Calc</a></h3>
           <p>A simple calculator for golden section proportions.</p>
           <a href="http://github.com/ablank/phi" class="github">Git this project</a>
         </section>
@@ -74,7 +74,7 @@
 
     <footer>
       <a href="http://github.com/ablank" class="github">ablank</a>
-      
+
         <p>
           <small class="copyright">
             &copy; 2015 Adam Blankenship
@@ -84,14 +84,15 @@
   </div>
 
   <script src="dist/js/jquery-3.6.0.min.js"></script>
+  <script src="dist/js/jquery.once.min.js"></script>
+  <script src="dist/js/particles.min.js"></script>
+  <script src="dist/js/particles-config.min.js"></script>
   <script src="dist/js/jquery.cellular-ui.min.js" type="text/javascript"></script>
   <script type="text/javascript">
     (function ($) {
       var cclass = "jCard";
       $('.' + cclass).jCard();
       var card = $($('#content').find('.' + cclass));
-      console.log(card);
-
       card.each(function () {
         var t = $(this),
           title = t.children().first(),

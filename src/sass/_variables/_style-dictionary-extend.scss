@@ -5,22 +5,20 @@
 
 /* Variable aliases */
 $hilight: $color-hilight;
-$dark: $color-primary;
-$dark-bg: $color-primary-bg;
-$light: $color-secondary;
-$light-bg: $color-secondary-bg;
-$grey: $color-neutral;
+$dark: $swatch-black;
+$light: $swatch-white;
+$grey: $swatch-grey;
 $adjust: 25%;
 
 /* Variable extensions */
 $dark-light: lighten($dark, $adjust);
 $dark-dark: darken($dark, $adjust);
 
-$light-light: lighten($dark, $adjust);
-$light-dark: darken($dark, $adjust);
+$light-light: lighten($light, $adjust);
+$light-dark: darken($light, $adjust);
 
-$grey-light: lighten($dark, $adjust);
-$grey-dark: darken($dark, $adjust);
+$grey-light: lighten($grey, $adjust);
+$grey-dark: darken($grey, $adjust);
 
 $hilight-light: lighten($hilight, $adjust);
 $hilight-dark: lighten($hilight, $adjust);

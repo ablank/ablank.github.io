@@ -3,7 +3,7 @@
   h2 {
     margin: 0.4em 0;
     padding: 1em;
-    color: $dark-bg;
+    color: $light-dark;
     background: $hilight;
 
     &::after {
@@ -33,7 +33,7 @@ a[id^="comment-"] {
   padding: 0 0 0 1em;
 
   .comment {
-    background-color: darken($dark-bg, 10%);
+    background-color: darken($light-dark, 10%);
   }
 }
 
@@ -45,7 +45,7 @@ a[id^="comment-"] {
   margin: 0.1em auto 0.4em;
   text-align: left;
   border: 1px $color-neutral solid;
-  background-color: darken($dark-bg, 3%);
+  background-color: darken($light-dark, 3%);
 
   &.new {
     border-color: $color-error;

@@ -1,7 +1,7 @@
 // $direction='x' || 'y' || 'rad'
 @mixin gradient(
 $direction: "bottom",
-$color_1: $dark-bg,
+$color_1: $light-dark,
 $color_2: $dark
 ) {
   background-color: $color_1;

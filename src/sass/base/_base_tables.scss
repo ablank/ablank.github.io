@@ -26,11 +26,11 @@ thead {
 }
 
 tr:nth-child(even) {
-  background: darken($dark-bg, 5%);
+  background: darken($light-dark, 5%);
 }
 
 tr:nth-child(odd) {
-  background: $dark-bg;
+  background: $light-dark;
 }
 
 td {

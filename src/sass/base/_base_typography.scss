@@ -68,7 +68,7 @@ sub {
 blockquote,
 q {
   color: $light;
-  background-color: $light-bg;
+  background-color: $light-dark;
   font-style: italic;
 
   &::before {

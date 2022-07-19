@@ -19,11 +19,11 @@
   }
 
   a {
-    @include button($light-bg, $light-bg);
+    @include button($light-dark, $light-dark);
 
     &:hover,
     &:focus {
-      color: $dark-bg;
+      color: $light-dark;
       background: $dark;
     }
   }
@@ -39,7 +39,7 @@
     color: $light;
     border: $default-border;
     outline: 0;
-    background: $dark-bg;
+    background: $light-dark;
     font-weight: bold;
   }
 }

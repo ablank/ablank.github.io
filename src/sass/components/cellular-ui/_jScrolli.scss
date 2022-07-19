@@ -152,7 +152,7 @@ $width: 800px;
     margin: 0;
     padding: 0.8em;
     opacity: 1;
-    color: $dark-bg;
+    color: $light-dark;
   }
 }
 
@@ -166,7 +166,7 @@ $width: 800px;
   cursor: pointer;
   text-indent: -999em;
   opacity: 0.2;
-  color: $dark-bg;
+  color: $light-dark;
 
   /* background-size: $controlsize; */
   background-color: $color-neutral;
@@ -201,7 +201,7 @@ $width: 800px;
     left: 0;
     transition: none;
     opacity: 0;
-    border: $dark-bg 2px solid;
+    border: $light-dark 2px solid;
     border-radius: 50%;
     background-color: $dark;
   }

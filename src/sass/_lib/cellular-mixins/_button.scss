@@ -1,6 +1,6 @@
 @mixin button(
   $color: $color-hilight,
-  $background: $dark-bg,
+  $background: $light-dark,
   $style: "flat"
 ) {
   /* 'flat' || 'bevel' */

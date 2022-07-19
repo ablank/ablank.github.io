@@ -20,7 +20,7 @@
     "clean": "rimraf dist/**/*",
     "postcss": "node src/.build/postcss.js --trace-warnings ...",
     "sass": "sass src/sass:dist/css --no-source-map",
-    "js:beautify": "copyfiles -f src/js/*.js dist/js && prettier --config ./src/.build/.prettierrc.json --write ./dist/js/**/*",
+    "js:beautify": "copyfiles -f src/js/**/*.js dist/js -e cellular-ui/**/* && prettier --config ./src/.build/.prettierrc.json --write ./dist/js/**/*",
     "js:uglify": "uglifyjs-folder dist/js -p **/*.js,!**/*.min.js -eo dist/js",
     "icons": "node src/.build/icons.js",
     "favicons": "imagemin src/assets/favicons/ -o dist/assets/favicons",
@@ -59,10 +59,14 @@
     "stylelint": "^14.9.1",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "stylelint-order": "^5.0.0",
+    "tsparticles-engine": "^2.1.3",
+    "uniq": "^1.0.1",
     "utf-8-validate": "^5.0.9",
     "yaml": "^2.1.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.18.9",
+    "@babel/core": "^7.18.9",
     "bufferutil": "^4.0.6",
     "cli-glob": "^0.1.0",
     "concat": "^1.0.3",

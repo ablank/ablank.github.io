@@ -27,7 +27,7 @@
       color: $color-neutral;
       border: none;
       border-radius: unset;
-      background: $dark-bg;
+      background: $light-dark;
       box-shadow: $color-neutral 0 0.1em 0.25em;
       font-family: $h-font;
       font-size: $default-size;
@@ -38,7 +38,7 @@
       &:active,
       &.active {
         text-decoration: none;
-        color: $dark-bg;
+        color: $light-dark;
         background: $hilight;
       }
     }
@@ -87,8 +87,8 @@
       margin: 0;
       color: $color-neutral;
       border: none;
-      background: darken($dark-bg, 5%);
-      background: rgba(darken($dark-bg, 5%), 0.9);
+      background: darken($light-dark, 5%);
+      background: rgba(darken($light-dark, 5%), 0.9);
 
       &.active {
         overflow: visible;

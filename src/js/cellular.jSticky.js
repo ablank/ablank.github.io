@@ -1,7 +1,7 @@
 cellular.jSticky = function (opts) {
   var fn = {},
           o = jQuery.extend({
-            cclass = "jSticky",
+            cclass : "jSticky",
             offset: "20%" //Distance from top before activating sticky.
           }, opts);
 
