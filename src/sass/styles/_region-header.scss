@@ -3,6 +3,9 @@
   * Content region styles
 */
 
+/* Header region */
+$header-height: calc($logo-height + ($logo-padding * 2) + ($logo-margin * 2));
+
 #header {
   display: block;
   position: $region-header-position;

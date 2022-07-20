@@ -2,8 +2,8 @@ const path = require('path');
 const fs = require('fs');
 const concat = require('concat');
 const glob = require('glob');
-const distdir = path.resolve('..', 'dist', 'js');
-const distfile = 'bundle.js';
+const distdir = path.resolve('dist', 'js');
+const distfile = path.resolve(distdir, 'bundle.js');
 
 const makeDir = (dir) => {
   if (!fs.existsSync(dir)) {
@@ -11,22 +11,8 @@ const makeDir = (dir) => {
   }
 };
 
-let files = [
-  "jquery-3.6.0.min.js",
-  "jquery.once.min.js",
-  "particles.min.js",
-  "particles-config.min.js",
-  "jquery.cellular-ui.min.js"
-].forEach((el)=>{el = path.resolve(distdir, el)});
-console.log(files);
-
 makeDir(distdir);
 
-//let files = glob('**/*.min.js', '', (data) => {
-//  console.log(data);
-//});
-
-//let ffiles = glob('**/*');
 const read = (fName) => {
   new Promise((res, rej) => {
     fs.readFile(path.resolve(fName), (err, str) => {
@@ -43,8 +29,15 @@ const write = (fName, str) => {
     });
   });
 };
-concat(files)
-  .then((data) => write(path.resolve('..', 'src', 'js', distfile), data))
-  .catch((e) => {
-    console.error(e);
-  });
+
+glob('**/*/dist/js/**/*.min.js', {  }, (err, files) => {
+  concat(files)
+    .then((data) => {
+      console.log(`Data: ${data}`);
+      write(distfile, data);
+      console.log(`\nfiles: ${distfile} created\n`);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
