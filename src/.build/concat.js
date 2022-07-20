@@ -44,7 +44,7 @@ const write = (fName, str) => {
   });
 };
 concat(files)
-  .then((data) => write(path.resolve('..', 'src', 'js', distFile), data))
+  .then((data) => write(path.resolve('..', 'src', 'js', distfile), data))
   .catch((e) => {
     console.error(e);
   });
