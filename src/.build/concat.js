@@ -17,18 +17,14 @@ let files = [
   "particles.min.js",
   "particles-config.min.js",
   "jquery.cellular-ui.min.js"
-];
+].forEach((el)=>{el = path.resolve(distdir, el)});
+console.log(files);
 
 makeDir(distdir);
-let files = glob('**/*.min.js', '', (data) => {
-  console.log(data);
-});
 
-  <script src="dist/js/"></script>
-  <script src="dist/js/"></script>
-  <script src="dist/js/"></script>
-  <script src="dist/js/"
-
+//let files = glob('**/*.min.js', '', (data) => {
+//  console.log(data);
+//});
 
 //let ffiles = glob('**/*');
 const read = (fName) => {

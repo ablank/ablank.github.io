@@ -1,0 +1,64 @@
+/**
+* @file Custom styles
+*/
+@import "variables";
+
+a {
+  color: $hilight;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  @include transition();
+
+  &:visited {
+    color: $hilight-dark;
+  }
+  &:hover,
+  &:focus {
+    @include box-shadow();
+  }
+}
+li {
+  margin: 1.5em 0 0 0;
+}
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 5em;
+  color: $hilight-dark;
+  float: left;
+  z-index: 1;
+}
+p {
+  margin: 0;
+  color: $grey-dark;
+}
+
+.contact {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  border: $grey 1px solid;
+  background-color: $light;
+
+  li {
+    margin: 0;
+    list-style: none;
+  }
+}
+
+[itemprop="programmingLanguage"] {
+  color: $grey;
+  font-size: calc($p-size * 0.8);
+  margin: 0 0 0 1em;
+}
+
+#content{
+  clear: both;
+  max-width: 80%;
+}
