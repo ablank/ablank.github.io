@@ -23,6 +23,6 @@ $grey-dark: darken($grey, $adjust);
 $hilight-light: lighten($hilight, $adjust);
 $hilight-dark: darken($hilight, $adjust);
 
-$shadow: opacify($grey-dark, 0.6);
+$shadow: transparentize($grey-dark, 0.6);
 /* Header region */
 $header-height: calc($logo-height + ($logo-padding * 2) + ($logo-margin * 2));
