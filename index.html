@@ -12,15 +12,15 @@
 
   <title>Adam Blankenship: Web Design & Development</title>
 
-  <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
+  <link type="text/css" rel="stylesheet" href="dist/css/style.min.css" />
   <link rel="shortcut icon" href="dist/assets/favicons/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="dist/favicons/favicon-32.png" sizes="32x32" type="image/png" />
 </head>
 
 <body>
-  <div class="critical"></div>
+  <div id="critical"></div>
   <div id="page-wrap" class="wrapper">
-
+    <div id="decor"></div>
     <header id="header" class="cell">
       <h1>Adam Blankenship</h1>
       <h3>web design &amp; development</h3>
@@ -98,7 +98,6 @@
           title = t.children().first(),
           link = title.find('a').attr('href');
         if (typeof (link) != 'undefined') {
-          console.log(card.attr("class"));
           t.wrap('<a href="' + link + '" class="' + card.attr("class") + '" />');
         }
         title.next().wrapAll('<div class="content"/>');

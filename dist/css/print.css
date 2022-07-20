@@ -70,28 +70,44 @@
 /* Header region */
 /** Define custom vars here, create/update style dictionary entries as needed **/
 @media print {
-  img,
-p {
-    page-break-inside: avoid;
-  }
-  p,
-h2,
-h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-h3 {
-    page-break-after: avoid;
+  @page :first {
+    #header {
+      display: block;
+      visibility: visible;
+    }
   }
   a,
 a:visited {
     text-decoration: underline;
     color: #29b4de;
   }
-  a::after,
-a:visited::after {
-    content: " (" attr(href) ")";
+  img,
+picture,
+p {
+    page-break-inside: avoid;
+  }
+  p,
+h1,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+    page-break-after: avoid;
+  }
+  p a,
+h1 a,
+h2 a,
+h3 a {
+    word-wrap: break-word;
+  }
+  h1 {
+    font-size: 60pt;
+  }
+  h2 {
+    font-size: 30pt;
+  }
+  h3 {
+    font-size: 18pt;
   }
   pre,
 code,
@@ -103,15 +119,15 @@ blockquote {
 code a::after {
     content: none;
   }
-  #app,
-#content-wrap,
-#content-main {
-    width: 100%;
-  }
   #header,
 #footer,
 .hidden {
     display: none;
     visibility: hidden;
+  }
+  #content a:after,
+.printlink:after {
+    content: " (" attr(href) ")";
+    font-size: 0.7rem;
   }
 }

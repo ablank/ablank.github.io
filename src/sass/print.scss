@@ -5,33 +5,43 @@
 
 @import "variables";
 
+$h-size: 60pt;
+
 @media print {
-  img,
-  p {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
+  @page :first {
+    #header {
+      display: block;
+      visibility: visible;
+    }
   }
 
   a,
   a:visited {
     text-decoration: underline;
     color: $hilight;
+  }
+  
+  img,
+  picture,
+  p {
+    page-break-inside: avoid;
+  }
 
-    &::after {
-      content: " (" attr(href) ")";
+  p,
+  h1,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+    page-break-after: avoid;
+
+    a {
+      word-wrap: break-word;
     }
   }
+  h1 {font-size: $h-size;}
+  h2 {font-size: calc($h-size * 0.5);}
+  h3 {font-size: calc($h-size * 0.3);}
 
   pre,
   code,
@@ -45,16 +55,19 @@
     content: none;
   }
 
-  #app,
-  #content-wrap,
-  #content-main {
-    width: 100%;
-  }
-
   #header,
   #footer,
   .hidden {
     display: none;
     visibility: hidden;
   }
+
+  #content a,
+  .printlink {
+
+      &:after {
+        content: " (" attr(href) ")";
+        font-size: $size-small;
+      }
+    }
 }

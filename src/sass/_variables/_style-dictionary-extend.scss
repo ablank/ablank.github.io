@@ -21,7 +21,7 @@ $grey-light: lighten($grey, $adjust);
 $grey-dark: darken($grey, $adjust);
 
 $hilight-light: lighten($hilight, $adjust);
-$hilight-dark: lighten($hilight, $adjust);
+$hilight-dark: darken($hilight, $adjust);
 
 $shadow: opacify($grey-dark, 0.6);
 /* Header region */

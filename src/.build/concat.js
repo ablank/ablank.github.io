@@ -10,16 +10,26 @@ const makeDir = (dir) => {
     fs.mkdirSync(dir, { recursive: true });
   }
 };
+
+let files = [
+  "jquery-3.6.0.min.js",
+  "jquery.once.min.js",
+  "particles.min.js",
+  "particles-config.min.js",
+  "jquery.cellular-ui.min.js"
+];
+
 makeDir(distdir);
 let files = glob('**/*.min.js', '', (data) => {
   console.log(data);
 });
 
-concat(files)
-  .then((data) => write(path.resolve('..', 'src', 'js', distFile), data))
-  .catch((e) => {
-    console.error(e);
-  });
+  <script src="dist/js/"></script>
+  <script src="dist/js/"></script>
+  <script src="dist/js/"></script>
+  <script src="dist/js/"
+
+
 //let ffiles = glob('**/*');
 const read = (fName) => {
   new Promise((res, rej) => {
@@ -37,3 +47,8 @@ const write = (fName, str) => {
     });
   });
 };
+concat(files)
+  .then((data) => write(path.resolve('..', 'src', 'js', distFile), data))
+  .catch((e) => {
+    console.error(e);
+  });

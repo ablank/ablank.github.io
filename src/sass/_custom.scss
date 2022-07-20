@@ -8,6 +8,11 @@ $contact-size: 7em;
 $contact-size-s: 5.5em;
 
 @mixin smallify() {
+  
+  #page-wrap {
+    padding-top: calc($header_height / 2);
+  }
+
   #header {
     height: $bwidth2;
     box-shadow: 0 0 0.5em 0.1em opacify($dark, 0.8);
@@ -127,10 +132,10 @@ h1 {
 }
 
 #content {
-  background-color: $light;
   padding-top: $header_height;
   max-width: 80%;
   margin: 0 auto;
+  z-index: 1;
 }
 
 #contact {
@@ -158,10 +163,11 @@ h1 {
 }
 
 #footer {
-  background-color: $grey-light;
+  background-color: opacify($grey-light, 0.3);
+  padding: 1em;
 
   /*
-  .github {
+  a.github {
     &,
     &:visited {
       padding: 1.6em 1em 2.4em 10%;
@@ -180,11 +186,13 @@ h1 {
 */
 }
 a.jCard {
+  background-color: opacify($light, 0.3);
   border: $grey-light 1px solid;
   box-shadow: $size-nano $size-nano $size-nano 0 $grey;
   &:hover,
   &:active,
   &:focus {
+    background-color: opacify($light, 0.9);
     border-color: $grey;
     box-shadow: $size-tiny $size-tiny 0.75em 0 $shadow;
   }
@@ -214,16 +222,16 @@ a.jCard {
   }
 }
 
-.github {
+a.github {
   &,
   &:visited {
     font-weight: bold;
-    background-color: $hilight-dark;
     color: $light;
     display: block;
     padding: 0.5em 1em 0.7em 4em;
     backface-visibility: hidden;
     background-position: left 1em center;
+    background-color: $hilight-dark;
     background-image: url(../assets/icons/png/github-octo.png);
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEAElEQVRYhe1XW0vrWBQu/q6ZOTM/QF+8to4iihesKOdRUIKoqNOKF8Q74rONSYmS4MsZT2O9vyiCaKCiDzYinGOrVuOla/g2k5K2iSdTfRrOggXt7t7f+vba61aP56e4FI7jigRB+FNV1Yimad/j8bjx8PBA0MvLSwNrqqp+FUXR9+GGFUUZ0XXdIIvc3d3RxcUFU3y2CsgpihLE2XcZ53n+j7OzM4b++vpK0WiUgsEgVVVVUXFxcZZ6vV4aHh5me7AXEovFbnme/60g46urq+3JZJIh7ezsUGtra55RJ8VenIEkEol0OBz+/F+Nf35+fqaXlxeanp6msrIyqq+vd00A2tLSQrOzswwDWJIktbsyLknSJ9wcB3t6ehhYTU0N3d7e0uDgoCvj4+PjLDhLSkoYBrDgiVAo9PubxjmOKzLfHDc3AUHAlPX1dVpcXHTU7e3tzF4QwHl44t+YSL4ZmLIsj5pvbr1RbW0tFSImAeju7i5bUxQl4Hh7XdcNRHBuwC0vLxdEYG5uLoPh9/tZdqBm2BIQRZH5GWlkNV5XV8fesBBJpVJUXl6ewdrc3GTrgiB48whEo9EIfkSeWwkgt98j3d3deViqqq7nEdA07Tt+REGxEoAb3yPWC/l8PrZ2enr6LY+ArusGSmpuSpkRXKgEAoEsvPv7e1aq8wikUqk06nouAeT+e6SzszMLDzZgy5bA+fl5ZmN1dTW1tbWxGxQqT09P1NHRQZWVlRlc2LAloOu6cXNzQ6OjoyibrBacnJygeODNCiJwdXXFMFADgDkyMkKwYfsEmqZ9S6fTNDMzgzShgYEBamhoyIqFx8dHV4bxzijHKESNjY3sGYEJDNiwDUJVVb/i8NDQUMZoaWkpayrmd7iyv7+fJiYmaGVlJdN2IchxrPf19VFFRYVtjzDjSVXVL3aFyGdXiDiOo4ODAxYP1uKUTCazbg0yXV1dbzYps08IglBhW4rj8Tgrxc3NzVkH8RzobmNjY8ytCwsLrDpCr6+vGahhGMwLTsabmprMUvzocRJFUYJ2zQgK9wIARGDs8PCQjo6OaH5+nhEJhUJ0fHzsSGBvb48RlWV5yJEAx3FFGKOwEQZzQRBQcPPGxgbekd0YaYrnQPt2IjA5OcmMx2KxxA/nRFEUfzUHEgScHSAi2i2B3t5ecyB5XVpa+uRxI5IktWOMgk5NTTkS2NraepMAbm4ZyfyujJuiKIofrM2YsM4IPyKAgNvf32duB0Y4HHY3D+YKRmqMUQBCAYHL0d3W1tbyCKCAofIh1SxjeUIQhF88H/DHJIBJxpr3yAZ0T13XGTmoKUg1WZb/8ny0CILgxTCBUgpCaCpQfMZaJBL5m+f5yg837Pk/yz+zJtd4OxTw8wAAAABJRU5ErkJggg==);
   }
@@ -231,10 +239,20 @@ a.jCard {
   &:hover,
   &:focus {
     background-color: $hilight;
-    color: $light;
-    //background-position: left 1.5em center;
+    background-position: left 1.5em center;
   }
 }
+
+#decor {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  right:0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
 @include mediaquery($mediaquery-small) {
   @include smallify();
 }

@@ -287,8 +287,9 @@
   color: #bebebe;
   background: #bebebe;
   background-color: #e9e9e8;
+  padding: 1em;
   /*
-    .github {
+    a.github {
       &,
       &:visited {
         padding: 1.6em 1em 2.4em 10%;
@@ -312,9 +313,7 @@
   * Content region styles
 */
 article,
-#content,
-.content {
-  background: #fefefe;
+#content {
   z-index: 2;
 }
 
@@ -2265,7 +2264,7 @@ a {
   transition: all 400ms ease 0ms;
 }
 a:visited {
-  color: #97dbef;
+  color: #125e75;
 }
 a:hover, a:focus {
   /* offset-x | offset-y | blur-radius | spread-radius | color */
@@ -2311,10 +2310,10 @@ h1 {
 }
 
 #content {
-  background-color: #fefefe;
   padding-top: 96px;
   max-width: 80%;
   margin: 0 auto;
+  z-index: 1;
 }
 
 #contact {
@@ -2339,10 +2338,12 @@ h1 {
 }
 
 a.jCard {
+  background-color: #fefefe;
   border: #e9e9e8 1px solid;
   box-shadow: 0.25rem 0.25rem 0.25rem 0 #abaaa6;
 }
 a.jCard:hover, a.jCard:active, a.jCard:focus {
+  background-color: #fefefe;
   border-color: #abaaa6;
   box-shadow: 0.5rem 0.5rem 0.75em 0 #6c6b66;
 }
@@ -2363,21 +2364,34 @@ a.jCard.active p {
   color: #101010;
 }
 
-.github, .github:visited {
+a.github, a.github:visited {
   font-weight: bold;
-  background-color: #97dbef;
   color: #fefefe;
   display: block;
   padding: 0.5em 1em 0.7em 4em;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   background-position: left 1em center;
+  background-color: #125e75;
   background-image: url(../assets/icons/png/github-octo.png);
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEAElEQVRYhe1XW0vrWBQu/q6ZOTM/QF+8to4iihesKOdRUIKoqNOKF8Q74rONSYmS4MsZT2O9vyiCaKCiDzYinGOrVuOla/g2k5K2iSdTfRrOggXt7t7f+vba61aP56e4FI7jigRB+FNV1Yimad/j8bjx8PBA0MvLSwNrqqp+FUXR9+GGFUUZ0XXdIIvc3d3RxcUFU3y2CsgpihLE2XcZ53n+j7OzM4b++vpK0WiUgsEgVVVVUXFxcZZ6vV4aHh5me7AXEovFbnme/60g46urq+3JZJIh7ezsUGtra55RJ8VenIEkEol0OBz+/F+Nf35+fqaXlxeanp6msrIyqq+vd00A2tLSQrOzswwDWJIktbsyLknSJ9wcB3t6ehhYTU0N3d7e0uDgoCvj4+PjLDhLSkoYBrDgiVAo9PubxjmOKzLfHDc3AUHAlPX1dVpcXHTU7e3tzF4QwHl44t+YSL4ZmLIsj5pvbr1RbW0tFSImAeju7i5bUxQl4Hh7XdcNRHBuwC0vLxdEYG5uLoPh9/tZdqBm2BIQRZH5GWlkNV5XV8fesBBJpVJUXl6ewdrc3GTrgiB48whEo9EIfkSeWwkgt98j3d3deViqqq7nEdA07Tt+REGxEoAb3yPWC/l8PrZ2enr6LY+ArusGSmpuSpkRXKgEAoEsvPv7e1aq8wikUqk06nouAeT+e6SzszMLDzZgy5bA+fl5ZmN1dTW1tbWxGxQqT09P1NHRQZWVlRlc2LAloOu6cXNzQ6OjoyibrBacnJygeODNCiJwdXXFMFADgDkyMkKwYfsEmqZ9S6fTNDMzgzShgYEBamhoyIqFx8dHV4bxzijHKESNjY3sGYEJDNiwDUJVVb/i8NDQUMZoaWkpayrmd7iyv7+fJiYmaGVlJdN2IchxrPf19VFFRYVtjzDjSVXVL3aFyGdXiDiOo4ODAxYP1uKUTCazbg0yXV1dbzYps08IglBhW4rj8Tgrxc3NzVkH8RzobmNjY8ytCwsLrDpCr6+vGahhGMwLTsabmprMUvzocRJFUYJ2zQgK9wIARGDs8PCQjo6OaH5+nhEJhUJ0fHzsSGBvb48RlWV5yJEAx3FFGKOwEQZzQRBQcPPGxgbekd0YaYrnQPt2IjA5OcmMx2KxxA/nRFEUfzUHEgScHSAi2i2B3t5ecyB5XVpa+uRxI5IktWOMgk5NTTkS2NraepMAbm4ZyfyujJuiKIofrM2YsM4IPyKAgNvf32duB0Y4HHY3D+YKRmqMUQBCAYHL0d3W1tbyCKCAofIh1SxjeUIQhF88H/DHJIBJxpr3yAZ0T13XGTmoKUg1WZb/8ny0CILgxTCBUgpCaCpQfMZaJBL5m+f5yg837Pk/yz+zJtd4OxTw8wAAAABJRU5ErkJggg==);
 }
-.github:active, .github:hover, .github:focus {
+a.github:active, a.github:hover, a.github:focus {
   background-color: #29b4de;
-  color: #fefefe;
+  background-position: left 1.5em center;
+}
+
+#decor {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.scrolled #page-wrap {
+  padding-top: 48px;
 }
 .scrolled #header h1 {
   font-size: 1.5em;
@@ -2409,6 +2423,9 @@ a.jCard.active p {
   }
   /* /// */
   /* //// */
+  #page-wrap {
+    padding-top: 48px;
+  }
   #header {
     height: 3.5em;
     box-shadow: 0 0 0.5em 0.1em #101010;

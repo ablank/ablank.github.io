@@ -135,4 +135,4 @@ config.dark = {
   retina_detect: true,
 };
 
-particlesJS("page-wrap", config.light);
+particlesJS("decor", config.light);
