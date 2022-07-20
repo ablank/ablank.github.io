@@ -2,17 +2,21 @@
   * @file
   * Printed page styling
 */
+
 /***
 * SASS Configuration Variables
 ***/
+
 /* Import variables as defined in style-dictionary and mixins/libraries (i.e. bourbon, etc.) */
+
 /**
-* @file 
+* @file
 * Mixins index.
-* 
+*
 * Comment out any components that will not be used,
 * for best performance/smallest file size.
 */
+
 /**
   * @file
   // Cellular SASS mixins
@@ -36,11 +40,17 @@
   //
   /////
 */
+
 /* -------------------------------------------- */
+
 /* --------------------------------------------------------- */
+
 /* --------------------------------------------------------- */
+
 /* --------------------------------------------------------- */
+
 /* --------------------------------------------------------- */
+
 /**
   * @file
   * CSS loading indicators.
@@ -48,26 +58,34 @@
   * http://projects.lukehaas.me/css-loaders/
   * https://github.com/jh3y/whirl/
 */
+
 /* @import 'animations' */
+
 /**
-* @file 
+* @file
 * Component style index.
 *
 * Comment out any components that will not be used,
 * for best performance/smallest file size.
 */
+
 /*
   DO NOT EDIT DIRECTLY
   @see src/style-dictionary/variables/
   Generated on Mon, 18 Jul 2022 07:16:40 GMT
 */
+
 /**
 * @file
 * Add derivatives of style-dictionary variables .
 */
+
 /* Variable aliases */
+
 /* Variable extensions */
+
 /* Header region */
+
 /** Define custom vars here, create/update style dictionary entries as needed **/
 @media print {
   @page :first {
@@ -76,57 +94,68 @@
       visibility: visible;
     }
   }
+
   a,
-a:visited {
+  a:visited {
     text-decoration: underline;
     color: #29b4de;
   }
+
   img,
-picture,
-p {
+  picture,
+  p {
     page-break-inside: avoid;
   }
+
   p,
-h1,
-h2,
-h3 {
+  h1,
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
     page-break-after: avoid;
   }
+
   p a,
-h1 a,
-h2 a,
-h3 a {
+  h1 a,
+  h2 a,
+  h3 a {
     word-wrap: break-word;
   }
+
   h1 {
     font-size: 60pt;
   }
+
   h2 {
     font-size: 30pt;
   }
+
   h3 {
     font-size: 18pt;
   }
+
   pre,
-code,
-blockquote {
+  code,
+  blockquote {
     border: 1px solid #fefefe;
     page-break-inside: avoid;
   }
+
   pre,
-code a::after {
+  code a::after {
     content: none;
   }
+
   #header,
-#footer,
-.hidden {
+  #footer,
+  .hidden {
     display: none;
     visibility: hidden;
   }
-  #content a:after,
-.printlink:after {
+
+  #content a::after,
+  .printlink::after {
     content: " (" attr(href) ")";
     font-size: 0.7rem;
   }
