@@ -1,0 +1,49 @@
+/**
+  * @file
+  * Critical styles, useful for injecting inline while the page loads.
+*/
+
+@import "variables";
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#critical {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $light;
+  transition: background-color 1s ease 0, bottom 3s ease 750ms;
+
+  &.ready {
+    bottom: 100%;
+    background-color: rgba($light, 0);
+
+    .loading {
+      border: 0;
+      border-top: 0;
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 16px solid $grey-light;
+  border-top: 16px solid $hilight;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  transition: all 1s;
+}

@@ -275,7 +275,7 @@
   margin: 5em 0 0;
   color: #bebebe;
   background: #bebebe;
-  background-color: rgba(233, 233, 232, 0.7);
+  background-color: rgba(233, 233, 232, 0.5);
   padding: 1em;
   /*
     a.github {
@@ -2322,7 +2322,7 @@ h1 {
   transition: all 500ms ease 200ms;
 }
 #contact:hover, #contact:focus, #contact:active {
-  box-shadow: 0 0 1px 1px #fefefe;
+  box-shadow: 0 0 0.5em 1px #fefefe;
 }
 
 a.jCard {

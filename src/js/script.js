@@ -4,6 +4,9 @@
  */
 
 (function ($) {
+  
+  $('#critical').addClass('ready');
+  
   var cclass = "jCard";
   $("." + cclass).jCard();
   var card = $($("#content").find("." + cclass));

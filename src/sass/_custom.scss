@@ -8,7 +8,6 @@ $contact-size: 7em;
 $contact-size-s: 5.5em;
 
 @mixin smallify() {
-  
   #page-wrap {
     padding-top: calc($header_height / 2);
   }
@@ -67,6 +66,7 @@ $contact-size-s: 5.5em;
     border-radius: 50%;
   }
 }
+
 
 a {
   color: $hilight;
@@ -158,12 +158,13 @@ h1 {
   &:hover,
   &:focus,
   &:active {
-    box-shadow: 0 0 1px 1px $light;
+    box-shadow: 0 0 0.5em 1px $light;
+    
   }
 }
 
 #footer {
-  background-color: transparentize($grey-light, 0.3);
+  background-color: rgba($grey-light, 0.5);
   padding: 1em;
 
   /*
@@ -212,8 +213,7 @@ a.jCard {
   }
 
   &.active {
-
-    h3 a{
+    h3 a {
       background-color: $light;
       color: $dark;
     }
@@ -248,7 +248,7 @@ a.github {
   position: absolute;
   position: fixed;
   top: 0;
-  right:0;
+  right: 0;
   bottom: 0;
   left: 0;
   z-index: -1;
