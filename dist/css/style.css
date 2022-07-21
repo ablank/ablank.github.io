@@ -2384,7 +2384,7 @@ a.github:active, a.github:hover, a.github:focus {
 }
 .scrolled #header h1 {
   font-size: 1.5em;
-  margin: 0.5em 0 0 7%;
+  margin: 0.1em 0 0 7%;
 }
 .scrolled #header h3 {
   font-size: 1em;
@@ -2421,7 +2421,7 @@ a.github:active, a.github:hover, a.github:focus {
   }
   #header h1 {
     font-size: 1.5em;
-    margin: 0.5em 0 0 7%;
+    margin: 0.1em 0 0 7%;
   }
   #header h3 {
     font-size: 1em;
