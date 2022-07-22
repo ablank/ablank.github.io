@@ -2319,10 +2319,12 @@ h1 {
   border-radius: 50%;
   background-color: #fefefe;
   box-shadow: 0 0 1px 1px rgba(108, 107, 102, 0.4);
-  transition: all 500ms ease 200ms;
+  transition: all 500ms;
 }
 #contact:hover, #contact:focus, #contact:active {
   box-shadow: 0 0 0.5em 1px #fefefe;
+  border-color: #29b4de;
+  color: #29b4de;
 }
 
 a.jCard {
