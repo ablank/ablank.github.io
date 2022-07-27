@@ -1,0 +1,4 @@
+
+Copy example settings.local to /sites/default, add:
+
+$config['system.logging']['error_level'] = 'verbose';

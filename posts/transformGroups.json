@@ -1,0 +1,112 @@
+
+ {
+    'TransformGroups': {
+  'web': [
+    'attribute/cti',
+    'name/cti/kebab',
+    'size/px',
+    'color/css'
+  ],
+  'js': [
+    'attribute/cti',
+    'name/cti/pascal',
+    'size/rem',
+    'color/hex'
+  ],
+  'scss': [
+    'attribute/cti',
+    'name/cti/kebab',
+    'time/seconds',
+    'content/icon',
+    'size/rem',
+    'color/css'
+  ],
+  'css': [
+    'attribute/cti',
+    'name/cti/kebab',
+    'time/seconds',
+    'content/icon',
+    'size/rem',
+    'color/css'
+  ],
+  'less': [
+    'attribute/cti',
+    'name/cti/kebab',
+    'time/seconds',
+    'content/icon',
+    'size/rem',
+    'color/hex'
+  ],
+  'html': [
+    'attribute/cti',
+    'attribute/color',
+    'name/human'
+  ],
+  'android': [
+    'attribute/cti',
+    'name/cti/snake',
+    'color/hex8android',
+    'size/remToSp',
+    'size/remToDp'
+  ],
+  'compose': [
+    'attribute/cti',
+    'name/cti/camel',
+    'color/composeColor',
+    'size/compose/em',
+    'size/compose/remToSp',
+    'size/compose/remToDp'
+  ],
+  'ios': [
+    'attribute/cti',
+    'name/cti/pascal',
+    'color/UIColor',
+    'content/objC/literal',
+    'asset/objC/literal',
+    'size/remToPt',
+    'font/objC/literal'
+  ],
+  'ios-swift': [
+    'attribute/cti',
+    'name/cti/camel',
+    'color/UIColorSwift',
+    'content/swift/literal',
+    'asset/swift/literal',
+    'size/swift/remToCGFloat',
+    'font/swift/literal'
+  ],
+  'ios-swift-separate': [
+    'attribute/cti',
+    'name/ti/camel',
+    'color/UIColorSwift',
+    'content/swift/literal',
+    'asset/swift/literal',
+    'size/swift/remToCGFloat',
+    'font/swift/literal'
+  ],
+  'assets': [
+    'attribute/cti'
+  ],
+  'flutter': [
+    'attribute/cti',
+    'name/cti/camel',
+    'color/hex8flutter',
+    'size/flutter/remToDouble',
+    'content/flutter/literal',
+    'asset/flutter/literal',
+    'font/flutter/literal'
+  ],
+  'flutter-separate': [
+    'attribute/cti',
+    'name/ti/camel',
+    'color/hex8flutter',
+    'size/flutter/remToDouble',
+    'content/flutter/literal',
+    'asset/flutter/literal',
+    'font/flutter/literal'
+  ],
+  'react-native': [
+    'name/cti/camel',
+    'color/css',
+    'size/object'
+}

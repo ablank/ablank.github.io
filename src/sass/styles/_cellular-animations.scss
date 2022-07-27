@@ -6,15 +6,15 @@
 
 @keyframes fadein {
   0% {
-    opacity: $alpha-start;
+    opacity: 0;
   }
 
   40% {
-    opacity: ($alpha-end - $alpha-start) * $alpha-offset;
+    opacity: 0.4;
   }
 
   100% {
-    opacity: $alpha-end;
+    opacity: 1;
   }
 }
 
